@@ -5,7 +5,11 @@
     margin-bottom: 0px;
   }
 
+  .no-padding {
+    padding: 0px;
+  }
   div.user-image {
+    margin: 0px;
     height: 80px;
     width: 80px;
     background-image: url("http://cdn3.rd.io/user/no-user-image-square.jpg");
@@ -17,6 +21,5 @@
   div.card-content {
     border: 1px solid #BCBCBC;
     margin: 10px;
-    padding: 10px;
   }
 }
