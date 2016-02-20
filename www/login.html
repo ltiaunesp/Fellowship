@@ -47,13 +47,13 @@
 
   <!-- CONTROLLERS -->
     <script src="js/controllers/controllers.js" charset="utf-8"></script>
-
+    <script src="js/controllers/users/UserController.js"></script>
     <!-- APP -->
     <script src="js/app.js" charset="utf-8"></script>
 
 
   </head>
-  <body ng-app="fellowship">
+  <body ng-app="fellowship" ng-controller="UserController">
 
     <div class="container">
       <div class="row">
@@ -78,7 +78,7 @@
               <input type="password" class="form-control" id="password" placeholder="Password">
             </div>
             <div class="form-group">
-              <button type="submit" class="btn btn-default btn-lg">Sign In</button>
+              <button type="submit" class="btn btn-default btn-lg" ng-click="authenticate()">Sign In</button>
             </div>
           </form>
         </div>
