@@ -29,3 +29,14 @@
 a {
   color: black;
 }
+
+.new-h2 .btn-default {
+  width: 100%;
+  text-align: left;
+  font-size: 20px;
+}
+
+.btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

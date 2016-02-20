@@ -1,0 +1,25 @@
+@media all {
+  .thumbnail {
+    height: 200px;
+    min-width: 300px;
+    margin-bottom: 0px;
+  }
+
+  .no-padding {
+    padding: 0px;
+  }
+  div.user-image {
+    margin: 0px;
+    height: 80px;
+    width: 80px;
+    background-image: url("http://cdn3.rd.io/user/no-user-image-square.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  div.card-content {
+    border: 1px solid #BCBCBC;
+    margin: 10px;
+  }
+}
