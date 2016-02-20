@@ -1,0 +1,14 @@
+{
+  "result" : {
+    "name"   : "Felizberto",
+    "job"    : "member",
+    "skills" : [
+      {
+        "nodejs" : 100
+      },
+      {
+        "php"    : 58
+      }
+    ]
+  }
+}
