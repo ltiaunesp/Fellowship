@@ -1,1 +1,1 @@
-angular.module('fellowship.modules.missions.services', []); // CONTRUCTOR
+angular.module('fellowship.modules.missions.services', ['fellowship.modules.api']); // CONTRUCTOR
