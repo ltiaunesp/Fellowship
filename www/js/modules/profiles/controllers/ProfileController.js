@@ -1,6 +1,6 @@
 angular.module('fellowship.modules.profiles.controllers')
-  .controller('ProfileController', [function ($scope) {
-
+  .controller('ProfileController', function ($scope) {
+    
     // List users
     $scope.listUsers = function() {
       console.log('LISTING USERS');
@@ -16,4 +16,4 @@ angular.module('fellowship.modules.profiles.controllers')
       console.log('sETTING USER ID = ' + id);
     }
 
-  }])
+  })
