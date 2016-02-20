@@ -27,7 +27,7 @@ angular.module('fellowship.modules.slots.services')
           ProfileService.getAllProfiles()
             .success( (profiles) => {
               profiles.forEach((profile,index) => {
-                slot.skills.forEach( (skill,index) {
+                slot.skills.forEach( (skill,index) => {
                   if(profile.skills[skill.name] >= skill.value || appliers.indexOf(profile.id) != -1)
                     members.add(profile);
                 });
