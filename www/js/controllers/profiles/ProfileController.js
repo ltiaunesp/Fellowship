@@ -13,7 +13,7 @@ angular.module('fellowship.controllers')
 
     // Set user profile
     $scope.setProfile = function() {
-      console.log('sETTING USER ID = ' + id);
+      console.log('SETTING USER ID = ' + id);
     }
 
   })
