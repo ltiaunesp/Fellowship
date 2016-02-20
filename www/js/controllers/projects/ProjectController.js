@@ -2,12 +2,28 @@ angular.module('fellowship.controllers')
   .controller('ProjectController', function ($scope) {
 
     // Create
+    $scope.create = function() {
+      console.log('CREATE FUNCTION CALLED');
+    }
+
     // Read
+    $scope.read = function() {
+      console.log('READ FUNCTION CALLED');
+    }
+
     // Update
+    $scope.update = function() {
+      console.log('UPDATE FUNCTION CALLED');
+    }
+
     // Delete
+    $scope.delete = function() {
+      console.log('DELETE FUNCTION CALLED');
+    }
+
     // Index
-    $scope.crudi = function() {
-      console.log('CRUDI FUNCTION CALLED');
+    $scope.index = function() {
+      console.log('INDEX FUNCTION CALLED');
     }
 
     // To get/set (?) the team slots

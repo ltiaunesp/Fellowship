@@ -8,7 +8,19 @@ angular.module('fellowship.controllers')
 
     // Authenticating user
     $scope.authenticate = function() {
-      console.log('AUTHENTICATING USER');
+      var organizationName = document.querySelector("#org-name").value;
+      var username = document.querySelector("#username").value;
+      var password = document.querySelector("#password").value;
+      console.log(organizationName + ' ' + username + ' ' + password + ' - Checking authentication info, redirect');
+      var success = true;
+      if (success) {
+        // Redirect to our home.html
+        window.location.href = "home.html";
+      }
+      else {
+        console.log('Login failed');
+        document.querySelector("#password").value = "";
+      }
     }
 
     // Logging out the user
@@ -31,7 +43,9 @@ angular.module('fellowship.controllers')
         return;
       }
 
-      console.log('Account created!')
+      console.log('Account created!');
+      // Redirect to our home.html
+      window.location.href = "home.html";
     }
 
   });
