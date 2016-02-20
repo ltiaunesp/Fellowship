@@ -9,10 +9,10 @@ angular.module('fellowship.modules.profiles.services')
       }
       ApiService.performCall('profiles', 'get', parameters)
         .success((data) => {
-          deferred.resolve(data.result);
+          deferred.resolve(data);
         })
-        .error((status) => {
-          deferred.reject('error-do-req-profile-' + status);
+        .error((data, status) => {
+          deferred.reject('error-do-req-profile--' + status);
         });
       return deferred.promise;
     }
@@ -26,8 +26,8 @@ angular.module('fellowship.modules.profiles.services')
         .success((data) => {
           deferred.resolve(data);
         })
-        .error((status) => {
-          deferred.reject('error-fail-to-get-all-members-'+status);
+        .error((data, status) => {
+          deferred.reject('error-fail-to-get-all-members--'+status);
         })
     }
 
@@ -41,13 +41,13 @@ angular.module('fellowship.modules.profiles.services')
               .success((data) => {
                 deferred.resolve(data);
               })
-              .error((status) => {
-                deferred.reject('error-do-req-current-profile-' + status);
+              .error((data, status) => {
+                deferred.reject('error-do-req-current-profile--' + status);
               })
           else
             deferred.reject('error-user-not-logged')
         })
-        .error((status) => {
+        .error((data, status) => {
           deferred.reject('error-cant-verify-login');
         });
 

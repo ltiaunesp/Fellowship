@@ -27,9 +27,9 @@ angular.module('fellowship.modules.api.services')
           console.log(data);
           $q.resolve(data);
         })
-        .error((status) => {
+        .error((data, status) => {
           console.log('Fail Authentication');
-          $q.reject('error-do-auth-' + status);
+          $q.reject('error-do-auth--' + status);
         });
       return deferred.promise;
     }
@@ -47,8 +47,8 @@ angular.module('fellowship.modules.api.services')
         .sucess((data) => {
           $q.resolve(data.result);
         })
-        .error((status) => {
-          $q.reject('error-do-reg-' + status);
+        .error((data, status) => {
+          $q.reject('error-do-reg--' + status);
         });
       return deferred.promise;
     }

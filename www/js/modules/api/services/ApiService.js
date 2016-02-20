@@ -14,9 +14,11 @@ angular.module('fellowship.modules.api.services')
       // req.url = urlBase + '/' + module + '/' + method;
       req.url = urlBase + '/' + module + '/' + method + ".json"; // change on server implementation
       $http(req)
-        .sucess(deferred.resolve)
-        .error((data,status) => {
-          deferred.reject("error-do-api-call-" + status);
+        .sucess( (data) => {
+          deferred.resolve(data.result);
+        })
+        .error( (data, status) => {
+          deferred.reject("error-do-api-call--" + status);
         });
       return deferred.promise;
     }
