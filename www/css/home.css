@@ -1,0 +1,28 @@
+@media all and (min-width: 768px) {
+  .fa {
+    display: none;
+  }
+}
+
+.container {
+  width: 95%;
+}
+
+#my-projects {
+  margin: 60px auto;
+  border: 1px solid black;
+  height: 300px;
+  padding: 25px;
+}
+
+#other-projects {
+  margin: 90px auto;
+  border: 1px solid black;
+  height: 300px;
+}
+
+.project {
+  border: 1px solid red;
+  margin: 25px;
+  height: 200px;
+}

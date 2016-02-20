@@ -1,0 +1,48 @@
+body {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-horizontal {
+  width: 30%;
+  min-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+}
+
+h1 {
+  margin-top: 10%;
+  margin-bottom: 3%;
+  text-transform: uppercase;
+}
+
+label {
+  text-transform: uppercase;
+}
+
+@media all and (min-width: 992px) {
+  #box1 {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    height: 560px;
+  }
+
+  #box2 {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    height: 560px;
+  }
+
+  #box3 {
+    height: 460px;
+    border-left: 2px solid black;
+    margin-top: 50px;
+  }
+
+  #box3 p {
+    padding-top: 35%;
+  }
+}
