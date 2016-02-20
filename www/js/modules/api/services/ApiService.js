@@ -16,7 +16,7 @@ angular.module('fellowship.modules.api.services')
       $http(req)
         .sucess(deferred.resolve)
         .error((data,status) => {
-          deffered.reject("error-do-api-call-" + status);
+          deferred.reject("error-do-api-call-" + status);
         });
       return deferred.promise;
     }

@@ -1,13 +1,12 @@
 {
   "result" : {
+    "id"     : 1
     "name"   : "Felizberto",
     "job"    : "member",
     "skills" : [
       {
-        "nodejs" : 100
-      },
-      {
-        "php"    : 58
+        "name"  : "nodejs",
+        "value" : "100"
       }
     ]
   }
