@@ -2,6 +2,10 @@
   .nav .fa {
     display: none;
   }
+
+  #oi {
+    display: none;
+  }
 }
 
 .new-h2 {
@@ -43,4 +47,10 @@ img {
 
 .box .col-lg-12 {
   padding: 20px;
+}
+
+@media all and (max-width: 768px) {
+  .btn-default {
+    display: none;
+  }
 }
