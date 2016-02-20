@@ -1,5 +1,5 @@
 angular.module('fellowship.modules.users.controllers')
-  .controller('UserController', [function($scope) {
+  .controller('UserController', function($scope) {
 
     // Get quest information
     $scope.getUserInfo = function() {
@@ -21,4 +21,4 @@ angular.module('fellowship.modules.users.controllers')
       console.log('REGISTER USER');
     }
 
-  }]);
+  });

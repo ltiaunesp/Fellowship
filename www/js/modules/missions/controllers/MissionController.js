@@ -1,5 +1,5 @@
 angular.module('fellowship.modules.missions.controllers')
-  .controller('MissionController', [function ($scope) {
+  .controller('MissionController', function ($scope) {
 
     // Create a new quest
     $scope.createQuest = function() {
@@ -26,4 +26,4 @@ angular.module('fellowship.modules.missions.controllers')
       console.log('GET MISSION FUNCTION CALLED');
     }
 
-  }]);
+  });

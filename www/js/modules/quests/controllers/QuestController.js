@@ -1,5 +1,5 @@
 angular.module('fellowship.modules.quests.controllers')
-  .controller('QuestController', [function ($scope) {
+  .controller('QuestController', function ($scope) {
 
     // Get quest information
     $scope.get = function() {
@@ -11,4 +11,4 @@ angular.module('fellowship.modules.quests.controllers')
       console.log('DELETE QUEST FUNCTION CALLED');
     }
 
-  }]);
+  });

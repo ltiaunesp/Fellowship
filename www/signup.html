@@ -7,8 +7,53 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/signup.css" media="screen" title="no title" charset="utf-8">
 
+    <!--  ANGULAR -->
+    <script src="js/angular.min.js" charset="utf-8"></script>
+
+    <!-- API -->
+    <script src="js/modules/api/services/services.js" charset="utf-8"></script>
+    <script src="js/modules/api/services/ApiService.js" charset="utf-8"></script>
+    <script src="js/modules/api/api.js" charset="utf-8"></script>
+
+    <!-- USER -->
+    <script src="js/modules/users/services/services.js" charset="utf-8"></script>
+    <script src="js/modules/users/controllers/controllers.js" charset="utf-8"></script>
+    <script src="js/modules/users/users.js" charset="utf-8"></script>
+    <script src="js/modules/users/controllers/UserController.js" charset="utf-8"></script>
+
+    <!-- PROFILES -->
+    <script src="js/modules/profiles/services/services.js" charset="utf-8"></script>
+    <script src="js/modules/profiles/controllers/controllers.js" charset="utf-8"></script>
+    <script src="js/modules/profiles/profiles.js" charset="utf-8"></script>
+
+    <!-- SLOTS -->
+    <script src="js/modules/slots/services/services.js" charset="utf-8"></script>
+    <script src="js/modules/slots/controllers/controllers.js" charset="utf-8"></script>
+    <script src="js/modules/slots/slots.js" charset="utf-8"></script>
+
+    <!-- PROJECTS -->
+    <script src="js/modules/projects/services/services.js" charset="utf-8"></script>
+    <script src="js/modules/projects/controllers/controllers.js" charset="utf-8"></script>
+    <script src="js/modules/projects/projects.js" charset="utf-8"></script>
+
+    <!-- MISSIONS -->
+    <script src="js/modules/missions/services/services.js" charset="utf-8"></script>
+    <script src="js/modules/missions/controllers/controllers.js" charset="utf-8"></script>
+    <script src="js/modules/missions/missions.js" charset="utf-8"></script>
+
+    <!-- QUESTS -->
+    <script src="js/modules/quests/services/services.js" charset="utf-8"></script>
+    <script src="js/modules/quests/controllers/controllers.js" charset="utf-8"></script>
+    <script src="js/modules/quests/quests.js" charset="utf-8"></script>
+
+    <!-- MODULES -->
+    <script src="js/modules/modules.js" charset="utf-8"></script>
+
+    <!-- APP -->
+    <script src="js/app.js" charset="utf-8"></script>
+
   </head>
-  <body>
+  <body ng-app="fellowship" ng-controller="UserController">
 
     <div class="container">
       <div class="row">
@@ -41,7 +86,7 @@
               <input type="password" class="form-control" id="conf-password" placeholder="Confirm Password">
             </div>
             <div class="form-group">
-              <button type="submit" class="btn btn-default btn-lg">Sign Up</button>
+              <button type="submit" class="btn btn-default btn-lg" ng-click="register()">Sign Up</button>
             </div>
           </form>
         </div>

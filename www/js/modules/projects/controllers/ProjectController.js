@@ -1,5 +1,5 @@
 angular.module('fellowship.modules.projects.controllers')
-  .controller('ProjectController', [function ($scope) {
+  .controller('ProjectController', function ($scope) {
 
     // Create
     // Read
@@ -30,4 +30,4 @@ angular.module('fellowship.modules.projects.controllers')
       console.log('LIST MISSION FUNCTION CALLED');
     }
 
-  }]);
+  });
