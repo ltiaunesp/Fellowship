@@ -1,0 +1,14 @@
+@media all and (min-width: 768px) {
+  .nav .fa {
+    display: none;
+  }
+}
+
+.new-h2 {
+  font-size: 25px;
+  padding: 0px;
+}
+
+a {
+  color: black;
+}

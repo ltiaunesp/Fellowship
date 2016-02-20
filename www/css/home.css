@@ -1,8 +1,8 @@
-/*@media all and (min-width: 768px) {
-  .fa {
+@media all and (min-width: 768px) {
+  .nav .fa {
     display: none;
   }
-}*/
+}
 
 .thumbnail {
   height: 200px;
@@ -10,7 +10,7 @@
   margin-bottom: 0px;
 }
 
-.row {
+.box {
   border: 1px solid black;
   padding: 20px;
   margin-top: 10px;
@@ -19,6 +19,11 @@
 
 .col-lg-4, .col-sm-12, .col-xs-12 {
   padding: 20px;
+}
+
+.new-h2 {
+  font-size: 25px;
+  padding: 0px;
 }
 
 a {
