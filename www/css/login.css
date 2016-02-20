@@ -1,6 +1,7 @@
 body {
   margin: 0 auto;
   text-align: center;
+  color: RGBA(59, 59, 59, 0.81);
 }
 
 .form-horizontal {
