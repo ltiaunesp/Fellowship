@@ -3,7 +3,7 @@
     display: none;
   }
 
-  #oi {
+  #pencil {
     display: none;
   }
 }
@@ -52,5 +52,9 @@ img {
 @media all and (max-width: 768px) {
   .btn-default {
     display: none;
+  }
+
+  #center {
+    text-align: center;
   }
 }
