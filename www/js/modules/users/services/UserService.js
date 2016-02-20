@@ -23,7 +23,7 @@ angular.module('fellowship.modules.api.services')
       }
       ApiService.performCall('users', 'authenticate', parameters)
         .sucess((data) => {
-          console.log('Sucess Authentication');
+          console.log('Success Authentication');
           console.log(data);
           $q.resolve(data);
         })
@@ -35,7 +35,21 @@ angular.module('fellowship.modules.api.services')
     }
 
     service.register = function(name, username, password, organization){
-      
+      var deferred = $q.defer();
+      var parameters = {
+        'name'         : name,
+        'username'     : username,
+        'password'     : password,
+        'organization' : organization
+      }
+      ApiService.performCall('users', 'register', parameters)
+        .sucess((data) => {
+          $q.resolve(data.result);
+        })
+        .error((status) => {
+          $q.reject('error-do-reg-' + status);
+        });
+      return deferred.promise;
     }
 
     return service;
