@@ -9,6 +9,38 @@
   padding: 0px;
 }
 
+.new-h1 {
+  font-size: 35px;
+  padding: 0px;
+}
+
+.new-h3 {
+  font-size: 20px;
+  padding: 0px;
+}
+
+
 a {
   color: black;
+}
+
+img {
+  border: 1px solid black;
+}
+
+.box {
+  border: 1px solid black;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.thumbnail {
+  height: 150px;
+  min-width: 300px;
+  margin-bottom: 0px;
+}
+
+.box .col-lg-12 {
+  padding: 20px;
 }
