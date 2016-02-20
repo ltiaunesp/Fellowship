@@ -34,13 +34,14 @@ angular.module('fellowship.modules.api.services')
       return deferred.promise;
     }
 
-    service.register = function(name, username, password, organization){
+    service.register = function(name, username, password, job = "member", organization = 1){
       var deferred = $q.defer();
       var parameters = {
         'name'         : name,
         'username'     : username,
         'password'     : password,
-        'organization' : organization
+        'organization' : organization,
+        'job'          : job
       }
       ApiService.performCall('users', 'register', parameters)
         .sucess((data) => {
