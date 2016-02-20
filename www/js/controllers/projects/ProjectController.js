@@ -1,4 +1,4 @@
-angular.module('fellowship.modules.projects.controllers')
+angular.module('fellowship.controllers')
   .controller('ProjectController', function ($scope) {
 
     // Create

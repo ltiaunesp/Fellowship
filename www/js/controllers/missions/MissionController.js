@@ -1,4 +1,4 @@
-angular.module('fellowship.modules.missions.controllers')
+angular.module('fellowship.controllers')
   .controller('MissionController', function ($scope) {
 
     // Create a new quest

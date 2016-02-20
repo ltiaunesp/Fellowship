@@ -1,2 +1,1 @@
-angular.module('fellowship.modules.profiles',
-  ['fellowship.modules.profiles.controllers', 'fellowship.modules.profiles.services']);
+angular.module('fellowship.modules.profiles', ['fellowship.modules.profiles.services']);

@@ -1,4 +1,4 @@
-angular.module('fellowship.modules.slots.controllers')
+angular.module('fellowship.controllers')
   .controller('SlotsController', function($scope) {
 
     // Get slots (?)

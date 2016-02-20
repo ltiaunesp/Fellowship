@@ -1,4 +1,4 @@
-angular.module('fellowship.modules.quests.controllers')
+angular.module('fellowship.controllers')
   .controller('QuestController', function ($scope) {
 
     // Get quest information

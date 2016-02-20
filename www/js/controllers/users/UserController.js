@@ -1,4 +1,4 @@
-angular.module('fellowship.modules.users.controllers')
+angular.module('fellowship.controllers')
   .controller('UserController', function($scope) {
 
     // Get quest information
