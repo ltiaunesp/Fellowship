@@ -1,12 +1,69 @@
-@orange: #FF6B3C;
-@dark-teal: #444C58;
-@teal: #26A599;
-@light-teal: #A5DAD4;
-@gray: #B4BBC3;
-@light-gray: #F2F4F5;
+/*
+    Website Color Pallet
+
+    orange: #FF6B3C;
+    teal: #26A599;
+    lightTeal: #A5DAD4;
+    darkGray: #444C58;
+    gray: #B4BBC3;
+    lightGray: #F2F4F5;
+*/
 
 @media all and (min-width: 768px) {
   .nav .fa {
     display: none;
+  }
+  /*
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Fellowship</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="#"><i class="fa fa-users"></i> Members</a></li>
+            <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a ng-click="logout()" href="#"><i class="fa fa-sign-out"></i> Log Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  */
+
+  nav.navbar, nav.bar div.container-fluid {
+    background-color: #444C58;
+    color: #F2F4F5;
+  }
+
+  /*Menu buttons style*/
+  div.navbar-header a.navbar-brand,
+  div.navbar-header a.navbar-brand:hover,
+  div.navbar-header a.navbar-brand:active,
+  div.navbar-header a.navbar-brand:visited {
+    background-color: #26A599;
+    color: #F2F4F5;
+  }
+
+  div.navbar-collapse ul.navbar-nav li a,
+  div.navbar-collapse ul.navbar-nav li.active,
+  div.navbar-collapse ul.navbar-nav li a:active{
+    background-color: #444C58;
+    color: #F2F4F5;
+  }
+
+  div.navbar-collapse ul.navbar-nav li a:hover{
+    color: #26A599;
   }
 }
