@@ -12,7 +12,7 @@ angular.module('fellowship.modules.api.services')
     service.performCall = function(module, method, parameters){
       var deferred = $q.defer();
       // req.url = urlBase + '/' + module + '/' + method;
-      req.url = urlBase + '/' + module + '/' + method + ".json"; // change on server implementation
+      req.url = urlBase + '/' + module + '_' + method; // change on server implementation
       $http(req)
         .success( (data) => {
           deferred.resolve(data.result);
