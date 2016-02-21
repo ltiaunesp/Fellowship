@@ -1,19 +1,37 @@
 angular.module('fellowship.controllers')
-  .controller('ProfileController', function ($scope) {
+  .controller('ProfileController', function ($scope, ProfileService) {
 
     // List users
     $scope.listUsers = function() {
-      console.log('LISTING USERS');
+      console.log('listUsers function');
+      ProfileService.getAllProfiles(organizationName)
+      .then( (result) => { // Success
+        console.log(result);
+      }, (data, status) => { // Error
+        console.log('fail' + status);
+      });
     }
 
     // Get user profile
     $scope.getProfile = function(id) {
-      console.log('GETTING USER ID = ' + id);
+      console.log('getProfile function');
+      ProfileService.getProfile(id)
+      .then( (result) => { // Success
+        console.log(result);
+      }, (data, status) => { // Error
+        console.log('fail' + status);
+      });
     }
 
     // Set user profile
-    $scope.setProfile = function() {
-      console.log('SETTING USER ID = ' + id);
+    $scope.getMyProfile = function() {
+      console.log('getMyProfile function');
+      ProfileService.getCurrentProfile()
+      .then( (result) => { // Success
+        console.log(result);
+      }, (data, status) => { // Error
+        console.log('fail' + status);
+      });
     }
 
   })
