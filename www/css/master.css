@@ -1,12 +1,41 @@
-@orange: #FF6B3C;
-@dark-teal: #444C58;
-@teal: #26A599;
-@light-teal: #A5DAD4;
-@gray: #B4BBC3;
-@light-gray: #F2F4F5;
+/*
+    Website Color Pallet
+
+    orange: #FF6B3C;
+    teal: #26A599;
+    lightTeal: #A5DAD4;
+    darkGray: #444C58;
+    gray: #B4BBC3;
+    lightGray: #F2F4F5;
+*/
 
 @media all and (min-width: 768px) {
   .nav .fa {
     display: none;
+  }
+
+  nav.navbar, nav.bar div.container-fluid {
+    background-color: #444C58;
+    color: #F2F4F5;
+  }
+
+  /*Menu buttons style*/
+  div.navbar-header a.navbar-brand,
+  div.navbar-header a.navbar-brand:hover,
+  div.navbar-header a.navbar-brand:active,
+  div.navbar-header a.navbar-brand:visited {
+    background-color: #26A599;
+    color: #F2F4F5;
+  }
+
+  div.navbar-collapse ul.navbar-nav li a,
+  div.navbar-collapse ul.navbar-nav li.active,
+  div.navbar-collapse ul.navbar-nav li a:active{
+    background-color: #444C58;
+    color: #F2F4F5;
+  }
+
+  div.navbar-collapse ul.navbar-nav li a:hover{
+    color: #26A599;
   }
 }
