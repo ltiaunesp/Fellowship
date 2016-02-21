@@ -1,67 +1,167 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-10">
     <title>Members</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/project.css" media="screen" title="no title" charset="utf-10">
 
     <!--  ANGULAR -->
-    <script src="js/angular.min.js" charset="utf-8"></script>
+    <script src="js/angular.min.js" charset="utf-10"></script>
 
   <!-- MODULES -->
 
     <!-- API -->
-    <script src="js/modules/api/services/services.js" charset="utf-8"></script>
-    <script src="js/modules/api/services/ApiService.js" charset="utf-8"></script>
-    <script src="js/modules/api/api.js" charset="utf-8"></script>
+    <script src="js/modules/api/services/services.js" charset="utf-10"></script>
+    <script src="js/modules/api/services/ApiService.js" charset="utf-10"></script>
+    <script src="js/modules/api/api.js" charset="utf-10"></script>
 
     <!-- USER -->
-    <script src="js/modules/users/services/services.js" charset="utf-8"></script>
-    <script src="js/modules/users/services/UserService.js" charset="utf-8"></script>
-    <script src="js/modules/users/users.js" charset="utf-8"></script>
+    <script src="js/modules/users/services/services.js" charset="utf-10"></script>
+    <script src="js/modules/users/services/UserService.js" charset="utf-10"></script>
+    <script src="js/modules/users/users.js" charset="utf-10"></script>
 
     <!-- PROFILES -->
-    <script src="js/modules/profiles/services/services.js" charset="utf-8"></script>
-    <script src="js/modules/profiles/services/ProfileService.js" charset="utf-8"></script>
-    <script src="js/modules/profiles/profiles.js" charset="utf-8"></script>
+    <script src="js/modules/profiles/services/services.js" charset="utf-10"></script>
+    <script src="js/modules/profiles/services/ProfileService.js" charset="utf-10"></script>
+    <script src="js/modules/profiles/profiles.js" charset="utf-10"></script>
 
     <!-- SLOTS -->
-    <script src="js/modules/slots/services/services.js" charset="utf-8"></script>
-    <script src="js/modules/slots/services/SlotService.js" charset="utf-8"></script>
-    <script src="js/modules/slots/slots.js" charset="utf-8"></script>
+    <script src="js/modules/slots/services/services.js" charset="utf-10"></script>
+    <script src="js/modules/slots/services/SlotService.js" charset="utf-10"></script>
+    <script src="js/modules/slots/slots.js" charset="utf-10"></script>
 
     <!-- PROJECTS -->
-    <script src="js/modules/projects/services/services.js" charset="utf-8"></script>
-    <script src="js/modules/projects/projects.js" charset="utf-8"></script>
+    <script src="js/modules/projects/services/services.js" charset="utf-10"></script>
+    <script src="js/modules/projects/projects.js" charset="utf-10"></script>
 
     <!-- MISSIONS -->
-    <script src="js/modules/missions/services/services.js" charset="utf-8"></script>
-    <script src="js/modules/missions/services/MissionService.js" charset="utf-8"></script>
-    <script src="js/modules/missions/missions.js" charset="utf-8"></script>
+    <script src="js/modules/missions/services/services.js" charset="utf-10"></script>
+    <script src="js/modules/missions/services/MissionService.js" charset="utf-10"></script>
+    <script src="js/modules/missions/missions.js" charset="utf-10"></script>
 
     <!-- QUESTS -->
-    <script src="js/modules/quests/services/services.js" charset="utf-8"></script>
-    <script src="js/modules/quests/services/QuestService.js" charset="utf-8"></script>
-    <script src="js/modules/quests/quests.js" charset="utf-8"></script>
+    <script src="js/modules/quests/services/services.js" charset="utf-10"></script>
+    <script src="js/modules/quests/services/QuestService.js" charset="utf-10"></script>
+    <script src="js/modules/quests/quests.js" charset="utf-10"></script>
 
 
     <!-- BASE MODULE -->
-    <script src="js/modules/modules.js" charset="utf-8"></script>
+    <script src="js/modules/modules.js" charset="utf-10"></script>
 
   <!-- CONTROLLERS -->
-    <script src="js/controllers/controllers.js" charset="utf-8"></script>
+    <script src="js/controllers/controllers.js" charset="utf-10"></script>
 
     <!-- APP -->
-    <script src="js/app.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-10"></script>
 
   </head>
-  <body ng-app="fellowship" ng-controller="AppController" ng-init="redirectIfLoggedIn()">
+  <body ng-app="fellowship" ng-controller="AppController" ng-init="redirectIfNotLoggedIn()">
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Fellowship</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="#"><i class="fa fa-users"></i> Members</a></li>
+            <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><i class="fa fa-sign-out"></i> Log Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
           <h1>MEMBERS LIST</h1>
+          <div class="box row">
+
+            <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="card-content row">
+                <div class="no-padding col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                  <!-- Image -->
+                  <div class="user-image"></div>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                  <h4 class="card-title">FName LName</h4>
+                  <h6 class="card-subtitle text-muted">Occupation</h6>
+                  <a href="#" class="card-link">View Profile</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="card-content row">
+                <div class="no-padding col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                  <!-- Image -->
+                  <div class="user-image"></div>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                  <h4 class="card-title">FName LName</h4>
+                  <h6 class="card-subtitle text-muted">Occupation</h6>
+                  <a href="#" class="card-link">View Profile</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="card-content row">
+                <div class="no-padding col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                  <!-- Image -->
+                  <div class="user-image"></div>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                  <h4 class="card-title">FName LName</h4>
+                  <h6 class="card-subtitle text-muted">Occupation</h6>
+                  <a href="#" class="card-link">View Profile</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="card-content row">
+                <div class="no-padding col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                  <!-- Image -->
+                  <div class="user-image"></div>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                  <h4 class="card-title">FName LName</h4>
+                  <h6 class="card-subtitle text-muted">Occupation</h6>
+                  <a href="#" class="card-link">View Profile</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="card-content row">
+                <div class="no-padding col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                  <!-- Image -->
+                  <div class="user-image"></div>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                  <h4 class="card-title">FName LName</h4>
+                  <h6 class="card-subtitle text-muted">Occupation</h6>
+                  <a href="#" class="card-link">View Profile</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
 
