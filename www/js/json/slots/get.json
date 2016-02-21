@@ -1,0 +1,12 @@
+{
+  "result" : {
+    "skills" : [
+      {
+        "name" : "nodejs",
+        "value"    : 30 
+      }
+    ],
+    "appliers" : [1],
+    "user"     : false
+  }
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Profile</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Fellowship</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="#"><i class="fa fa-users"></i> Members</a></li>
+            <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><i class="fa fa-sign-out"></i> Log Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row" id="center">
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <h1>EDIT PROFILE</h1>
+        </div>
+
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+          <form class="form-horizontal">
+
+            <div class="row">
+              <div class="form-group form-group-lg">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                  <label for="user-fname" class="control-label">First Name</label>
+                </div>
+
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                  <input type="text" class="form-control" id="user-fname" placeholder="First Name">
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group form-group-lg">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                  <label for="user-lname" class="control-label">Last Name</label>
+                </div>
+
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                  <input type="text" class="form-control" id="user-lname" placeholder="First Name">
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group form-group-lg">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                  <label for="user-username" class="control-label">Username</label>
+                </div>
+
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                  <input type="text" class="form-control" id="user-username" placeholder="First Name">
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group form-group-lg">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                  <label for="user-occupation" class="control-label">Occupation</label>
+                </div>
+
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                  <input type="text" class="form-control" id="user-occupation" placeholder="First Name">
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="form-group form-group-lg">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                  <label for="user-picture" class="control-label">Change Image</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                  <img class="img-circle" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/AWS_Simple_Icons_Non-Service_Specific_User.svg/2000px-AWS_Simple_Icons_Non-Service_Specific_User.svg.png" height="120px" width="120px" />
+                  <input type="file" id="user-picture">
+                </div>
+              </div>
+            </div>
+
+            <!-- Password -->
+            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+              <a class="btn btn-primary" data-toggle="collapse" href="#collapseMissionOne" aria-expanded="true" aria-controls="collapseMissionOne">
+                <span class="glyphicon glyphicon-chevron-right"></span> Change Password
+              </a>
+            </p>
+            <div class="collapse" id="collapseMissionOne">
+              <div class="card card-block">
+                <div class="row">
+                  <div class="form-group form-group-lg">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                      <label for="quest-title" class="control-label">Old Password</label>
+                    </div>
+
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                      <input type="text" class="form-control" id="mission-title" placeholder="Old Password">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group form-group-lg">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                      <label for="quest-title" class="control-label">New Password</label>
+                    </div>
+
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                      <input type="text" class="form-control" id="mission-title" placeholder="New Password">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group form-group-lg">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                      <label for="quest-title" class="control-label">Confirm Password</label>
+                    </div>
+
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                      <input type="text" class="form-control" id="mission-title" placeholder="Confirm Password">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn btn-default btn-lg">Cancel</button>
+              <button type="submit" class="btn btn-default btn-lg">Save</button>
+            </div>
+
+            <hr>
+
+            <div>
+              <h3>DANGER ZONE</h3>
+              <button type="submit" class="btn btn-default btn-lg">Delete Profile</button>
+            </div>
+          </form>
+        </div>
+
+
+
+      </div>
+    </div>
+
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>

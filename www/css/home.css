@@ -14,7 +14,7 @@
   border: 1px solid black;
   padding: 20px;
   margin-top: 10px;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
 }
 
 .col-lg-4, .col-sm-12, .col-xs-12 {
@@ -28,4 +28,30 @@
 
 a {
   color: black;
+}
+
+.new-h2 .btn-default {
+  width: 100%;
+  text-align: left;
+  font-size: 20px;
+}
+
+.btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.new-h3 {
+  font-size: 20px;
+  padding: 0px;
+}
+
+.new-h2 {
+  font-size: 25px;
+  padding: 0px;
+}
+
+.new-h1 {
+  font-size: 35px;
+  padding: 0px;
 }

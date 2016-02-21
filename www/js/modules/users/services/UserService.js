@@ -8,11 +8,11 @@ angular.module('fellowship.modules.api.services')
         if(window.sessionStorage.userLogged)
           deferred.resolve(window.sessionStorage.userLogged)
         else
-          deffered.resolve(false);
-      catch(e){
+          deferred.resolve(false);
+      }catch(e){
         deferred.reject('error-do-user-verify-login');
       }
-      return deffered.promise;
+      return deferred.promise;
     }
     service.authenticate = function(username, password, organization){
       var deferred = $q.defer();
@@ -27,14 +27,14 @@ angular.module('fellowship.modules.api.services')
           console.log(data);
           $q.resolve(data);
         })
-        .error((status) => {
+        .error((data, status) => {
           console.log('Fail Authentication');
-          $q.reject('error-do-auth-' + status);
+          $q.reject('error-do-auth--' + status);
         });
       return deferred.promise;
     }
 
-    service.register = function(name, username, password, job = "member", organization = 1){
+    service.register = function(name, username, password, job, organization){
       var deferred = $q.defer();
       var parameters = {
         'name'         : name,
@@ -47,8 +47,8 @@ angular.module('fellowship.modules.api.services')
         .sucess((data) => {
           $q.resolve(data.result);
         })
-        .error((status) => {
-          $q.reject('error-do-reg-' + status);
+        .error((data, status) => {
+          $q.reject('error-do-reg--' + status);
         });
       return deferred.promise;
     }

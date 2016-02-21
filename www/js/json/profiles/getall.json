@@ -1,5 +1,5 @@
 {
-  "result" : {
+  "result" : [{
     "id"     : 1
     "name"   : "Felizberto",
     "job"    : "member",
@@ -9,5 +9,5 @@
         "value" : "100"
       }
     ]
-  }
+  }]
 }
