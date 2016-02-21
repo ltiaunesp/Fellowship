@@ -52,6 +52,7 @@
 
   <!-- CONTROLLERS -->
     <script src="js/controllers/controllers.js" charset="utf-8"></script>
+    <script src="js/controllers/users/UserController.js" charset="utf-8"></script>
 
     <!-- APP -->
     <script src="js/app.js" charset="utf-8"></script>
@@ -59,7 +60,7 @@
   </head>
   <body ng-app="fellowship" ng-controller="AppController" ng-init="redirectIfLoggedIn()">
 
-    <div class="container">
+    <div class="container" ng-controller="UserController">
       <div class="row">
         <div class="col-lg-12">
           <h1>Let's get started!</h1>
