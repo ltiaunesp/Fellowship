@@ -238,22 +238,12 @@
 
     <script src="js/jquery-2.2.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 
     <script type="text/javascript">
-    function equalHeight(group) {
-      var tallest = 0;
-      group.each(function() {
-          var thisHeight = $(this).height();
-          if(thisHeight > tallest) {
-              tallest = thisHeight;
-          }
+      $(document).ready(function() {
+        equalHeight($(".thumb-quest"));
       });
-      group.each(function() { $(this).height(tallest); });
-    }
-
-    $(document).ready(function() {
-      equalHeight($(".thumb-quest"));
-    });
     </script>
 
   </body>
