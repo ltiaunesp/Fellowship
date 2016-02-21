@@ -46,5 +46,9 @@ angular.module('fellowship.controllers')
         console.log("Error: " + status);
       });
     };
-
+    $scope.logout = function(){
+      UserService.logout();
+      window.location.href="index.html";
+    };
+    
   });
