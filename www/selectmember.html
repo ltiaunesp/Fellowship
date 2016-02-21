@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Select Member</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/selectmember.css" media="screen" title="no title" charset="utf-8">
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Fellowship</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="#"><i class="fa fa-users"></i> Members</a></li>
+            <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><i class="fa fa-sign-out"></i> Log Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row" id="center">
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <h1>SELECT MEMBER</h1>
+        </div>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <form class="form-horizontal">
+            <div class="box">
+              <h4>Search by Skills</h4>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <input type="text" class="form-control" id="skill-title" placeholder="Skill Title">
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <input type="text" class="form-control" id="skill-lvl" placeholder="Skill Level">
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <button class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> Add New Skill</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <span class="label label-default">JavaScript - Basic <span class="glyphicon glyphicon-remove"></span></span>
+                <span class="label label-default">C# <span class="glyphicon glyphicon-remove"></span></span>
+                <span class="label label-default">HTML - Expert <span class="glyphicon glyphicon-remove"></span></span>
+                <span class="label label-default">CSS <span class="glyphicon glyphicon-remove"></span></span>
+
+              </div>
+
+              <hr>
+
+              <div class="row">
+                <div class="form-group form-group-lg">
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                    <label for="user-fname" class="control-label">Selected Members</label>
+                  </div>
+
+                  <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                    <input type="text" class="form-control" id="user-fname" placeholder="@username1, @username2, @username3, ...">
+                  </div>
+                </div>
+
+              </div>
+
+              <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapseApplicants" aria-expanded="true" aria-controls="collapseApplicants">
+                  <span class="glyphicon glyphicon-chevron-right"></span> Applicants
+                </a>
+              </p>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="collapse" id="collapseApplicants">
+                  <div class="card card-block">
+                    <div class="card card-content form-group row">
+                      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                        <div class="row">
+                          <div class="no-padding col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <!-- Image -->
+                            <div class="user-image"></div>
+                          </div>
+                          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                            <h4 class="card-title">FName LName</h4>
+                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
+                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
+                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
+                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                        <button class="btn btn-default"><span class="glyphicon glyphicon-check"></span> Choose</button>
+                      </div>
+                    </div>
+
+                    <div class="card card-content form-group row">
+                      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                        <div class="row">
+                          <div class="no-padding col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <!-- Image -->
+                            <div class="user-image"></div>
+                          </div>
+                          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                            <h4 class="card-title">FName LName</h4>
+                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
+                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
+                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
+                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                        <button class="btn btn-default"><span class="glyphicon glyphicon-check"></span> Choose</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+              <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapseSuggested" aria-expanded="true" aria-controls="collapseSuggested">
+                  <span class="glyphicon glyphicon-chevron-right"></span> Suggested
+                </a>
+              </p>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="collapse" id="collapseSuggested">
+                  <div class="card card-block">
+                    <div class="card card-content form-group row">
+                      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                        <div class="row">
+                          <div class="no-padding col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <!-- Image -->
+                            <div class="user-image"></div>
+                          </div>
+                          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                            <h4 class="card-title">FName LName</h4>
+                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
+                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
+                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
+                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                        <button class="btn btn-default"><span class="glyphicon glyphicon-check"></span> Offer</button>
+                      </div>
+                    </div>
+
+                    <div class="card card-content form-group row">
+                      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                        <div class="row">
+                          <div class="no-padding col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <!-- Image -->
+                            <div class="user-image"></div>
+                          </div>
+                          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                            <h4 class="card-title">FName LName</h4>
+                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
+                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
+                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
+                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                        <button class="btn btn-default"><span class="glyphicon glyphicon-check"></span> Offer</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- end -->
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn btn-default btn-lg">Cancel</button>
+              <button type="submit" class="btn btn-default btn-lg">Save</button>
+            </div>
+          </form>
+        </div>
+
+
+
+      </div>
+    </div>
+
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>
