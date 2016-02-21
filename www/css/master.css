@@ -20,10 +20,10 @@
 @media all and (min-width: 768px) {
 
   body, p, li, ul, span {
-    font-family: "Exo-Regular", Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
   }
 
-  .h1, .h2, .h3, .h4, .h5, .h6 {
+  span.new-h1, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: "Caviar_Dreams_Bold", Helvetica, Arial, sans-serif;
   }
   /* Menu -------------------------------------*/
