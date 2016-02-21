@@ -4,6 +4,7 @@ angular.module('fellowship.controllers')
     // List users
     $scope.listUsers = function() {
       console.log('listUsers function');
+      organizationName = 'OrgName';
       ProfileService.getAllProfiles(organizationName)
       .then( (result) => { // Success
         console.log(result);
@@ -13,8 +14,9 @@ angular.module('fellowship.controllers')
     }
 
     // Get user profile
-    $scope.getProfile = function(id) {
+    $scope.getProfile = function() {
       console.log('getProfile function');
+      id = 3;
       ProfileService.getProfile(id)
       .then( (result) => { // Success
         console.log(result);
