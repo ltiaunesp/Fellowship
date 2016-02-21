@@ -13,34 +13,6 @@
   .nav .fa {
     display: none;
   }
-  /*
-
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Fellowship</a>
-        </div>
-
-        <div class="collapse navbar-collapse" id="collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#"><i class="fa fa-home"></i> Home</a></li>
-            <li><a href="#"><i class="fa fa-users"></i> Members</a></li>
-            <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a ng-click="logout()" href="#"><i class="fa fa-sign-out"></i> Log Out</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  */
 
   nav.navbar, nav.bar div.container-fluid {
     background-color: #444C58;
