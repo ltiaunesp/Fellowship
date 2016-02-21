@@ -62,7 +62,7 @@
   </head>
   <body ng-app="fellowship" ng-controller="AppController" ng-init="redirectIfNotLoggedIn()">
 
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" ng-controller="ProfileController">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-1" aria-expanded="false">
@@ -87,7 +87,7 @@
       </div>
     </nav>
 
-    <div class="container" ng-controller="ProfileController">
+    <div class="container">
 
       <div class="row" id="center">
         <div class="col-lg-10 col-md-10 col-sm-10">

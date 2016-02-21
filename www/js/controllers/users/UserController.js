@@ -3,12 +3,16 @@ angular.module('fellowship.controllers')
 
     $scope.user = {};
 
+    // Getting username
+    $scope.userName = "Defalt Name";
+
     // Get quest information
     $scope.updateUserInfo = function() {
       ProfileService.getCurrentProfile()
         .then(
           (user) => { // SUCCESS
             $scope.user = user;
+            console.log(user);
           },
           (data, status) => { // ERROR
             console.log("The user isn't logged in system")
@@ -21,10 +25,11 @@ angular.module('fellowship.controllers')
       var organizationName = document.querySelector("#org-name").value;
       var username = document.querySelector("#username").value;
       var password = document.querySelector("#password").value;
-
+      $scope.userName = username;
       UserService.authenticate(username, password, organizationName)
       .then( (result) => {
         console.log('Logged in!');
+        $scope.userName = username;
         // Redirect to our home.html
         window.location.href="home.html";
       }, (data, status) => {
@@ -50,6 +55,7 @@ angular.module('fellowship.controllers')
       UserService.register(firstName, username, password, 'Member', organizationName)
       .then( (result) => {
         console.log('Account created!');
+        $scope.userName = username;
         // Redirect to our home.html
         window.location.href="home.html";
       }, (data, status) => {
