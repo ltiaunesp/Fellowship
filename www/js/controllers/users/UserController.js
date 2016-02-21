@@ -13,12 +13,11 @@ angular.module('fellowship.controllers')
       var password = document.querySelector("#password").value;
 
       UserService.authenticate(username, password, organizationName)
-      .success( (result) => {
+      .then( (result) => {
         console.log('Logged in!');
         // Redirect to our home.html
         window.location.href = "home.html";
-      })
-      .error( (data, status) => {
+      }, (data, status) => {
         console.log('Error: ' + status);
       });
     };
@@ -44,12 +43,11 @@ angular.module('fellowship.controllers')
       }
 
       UserService.register(firstName, username, password, 'Member', organizationName)
-      .success( (result) => {
+      .then( (result) => {
         console.log('Account created!');
         // Redirect to our home.html
         window.location.href = "home.html";
-      })
-      .error( (data, status) => {
+      }, (data, status) => {
         console.log("Error: " + status);
       });
     };
