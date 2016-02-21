@@ -1,19 +1,23 @@
-var express    = require('express');
+var restify    = require('restify');
 var cors       = require('cors');
-var bodyParser = require('body-parser')
 var fs         = require('fs');
-var app = new express();
 
-app.use(cors());
-app.use(bodyParser.json());
+var modules = {};
 
-app.get("/api/:path", function(req,res){
-  fs.readFile('./json/' + req.params.path.split("_").join("/") + '.json', function(err, data){
-    if(err)
-      res.end();
-    else
-      res.end(data);
-  });
-})
+modules.users    = require('./lib/modules/users.js')
+modules.profiles = require('./lib/modules/profiles.js')
+modules.projects = require('./lib/modules/projects.js')
+modules.quests   = require('./lib/modules/quests.js')
+modules.missions = require('./lib/modules/missions.js')
+modules.slots    = require('./lib/modules/slots.js')
 
-app.listen(8080);
+var server = restify.createServer();
+
+server.use(restify.acceptParser(server.acceptable));
+server.use(restify.queryParser());
+server.use(restify.bodyParser());
+server.use(cors());
+for(module in modules){
+  server.get("/api/"+module+"/:path", modules[module].listener)
+}
+server.listen(8080);
