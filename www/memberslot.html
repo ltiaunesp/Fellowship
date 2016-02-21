@@ -41,170 +41,90 @@
       <div class="row" id="center">
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <h1>SELECT MEMBER</h1>
+          <h1>NEW MEMBER SLOT</h1>
         </div>
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <form class="form-horizontal">
             <div class="box">
-              <h4>Search by Skills</h4>
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <input type="text" class="form-control" id="skill-title" placeholder="Skill Title">
-                  </div>
-                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <input type="text" class="form-control" id="skill-lvl" placeholder="Skill Level">
-                  </div>
-                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <button class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> Add New Skill</button>
+
+              <div class="row">
+                <h4>Occupation</h4>
+                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <input type="text" class="form-control" id="skill-title" placeholder="FrontEnd Developer, Designer, ...">
+                    </div>
                   </div>
                 </div>
               </div>
 
               <div class="row">
-                <span class="label label-default">JavaScript - Basic <span class="glyphicon glyphicon-remove"></span></span>
-                <span class="label label-default">C# <span class="glyphicon glyphicon-remove"></span></span>
-                <span class="label label-default">HTML - Expert <span class="glyphicon glyphicon-remove"></span></span>
-                <span class="label label-default">CSS <span class="glyphicon glyphicon-remove"></span></span>
-
+                <h4>Needed Skills</h4>
+                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                      <input type="text" class="form-control" id="skill-title" placeholder="Skill Title">
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                      <input type="text" class="form-control" id="skill-lvl" placeholder="Skill Level">
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                      <button class="btn btn-default col-sm-12 col-xs-12"><span class="glyphicon glyphicon-plus"></span> Add New Skill</button>
+                    </div>
+                  </div>
+                </div>
               </div>
-
-              <hr>
 
               <div class="row">
-                <div class="form-group form-group-lg">
-                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-                    <label for="user-fname" class="control-label">Selected Members</label>
+
+                <h4>SKill List</h4>
+                <div class="list-group col-lg-8 col-md-8 col-sm-12 col-xs-12">
+
+                  <div class="list-group-item clearfix">
+                    <span class="glyphicon glyphicon-ok"></span>
+                    <button class="btn btn-xs btn-primary">JavaScript</button>
+                    <button class="btn btn-xs btn-info">Level</button>
+                    <span class="pull-right">
+                      <button class="btn btn-xs btn-warning">
+                        <span class="glyphicon glyphicon-trash"></span>
+                      </button>
+                    </span>
                   </div>
 
-                  <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-                    <input type="text" class="form-control" id="user-fname" placeholder="@username1, @username2, @username3, ...">
+                  <div class="list-group-item clearfix">
+                    <span class="glyphicon glyphicon-ok"></span>
+                    <button class="btn btn-xs btn-primary">JavaScript</button>
+                    <button class="btn btn-xs btn-info">Level</button>
+                    <span class="pull-right">
+                      <button class="btn btn-xs btn-warning">
+                        <span class="glyphicon glyphicon-trash"></span>
+                      </button>
+                    </span>
                   </div>
-                </div>
 
-              </div>
-
-              <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
-                <a class="btn btn-primary" data-toggle="collapse" href="#collapseApplicants" aria-expanded="true" aria-controls="collapseApplicants">
-                  <span class="glyphicon glyphicon-chevron-right"></span> Applicants
-                </a>
-              </p>
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="collapse" id="collapseApplicants">
-                  <div class="card card-block">
-                    <div class="card card-content form-group row">
-                      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                        <div class="row">
-                          <div class="no-padding col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                            <!-- Image -->
-                            <div class="user-image"></div>
-                          </div>
-                          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                            <h4 class="card-title">FName LName</h4>
-                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
-                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
-                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
-                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                        <button class="btn btn-default"><span class="glyphicon glyphicon-check"></span> Choose</button>
-                      </div>
-                    </div>
-
-                    <div class="card card-content form-group row">
-                      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                        <div class="row">
-                          <div class="no-padding col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                            <!-- Image -->
-                            <div class="user-image"></div>
-                          </div>
-                          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                            <h4 class="card-title">FName LName</h4>
-                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
-                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
-                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
-                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                        <button class="btn btn-default"><span class="glyphicon glyphicon-check"></span> Choose</button>
-                      </div>
-                    </div>
-
+                  <div class="list-group-item clearfix">
+                    <span class="glyphicon glyphicon-ok"></span>
+                    <button class="btn btn-xs btn-primary">JavaScript</button>
+                    <button class="btn btn-xs btn-info">Level</button>
+                    <span class="pull-right">
+                      <button class="btn btn-xs btn-warning">
+                        <span class="glyphicon glyphicon-trash"></span>
+                      </button>
+                    </span>
                   </div>
+
                 </div>
               </div>
 
-
-              <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
-                <a class="btn btn-primary" data-toggle="collapse" href="#collapseSuggested" aria-expanded="true" aria-controls="collapseSuggested">
-                  <span class="glyphicon glyphicon-chevron-right"></span> Suggested
-                </a>
-              </p>
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="collapse" id="collapseSuggested">
-                  <div class="card card-block">
-                    <div class="card card-content form-group row">
-                      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                        <div class="row">
-                          <div class="no-padding col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                            <!-- Image -->
-                            <div class="user-image"></div>
-                          </div>
-                          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                            <h4 class="card-title">FName LName</h4>
-                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
-                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
-                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
-                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                        <button class="btn btn-default"><span class="glyphicon glyphicon-check"></span> Offer</button>
-                      </div>
-                    </div>
-
-                    <div class="card card-content form-group row">
-                      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                        <div class="row">
-                          <div class="no-padding col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                            <!-- Image -->
-                            <div class="user-image"></div>
-                          </div>
-                          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                            <h4 class="card-title">FName LName</h4>
-                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
-                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
-                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
-                            <h6 class="card-subtitle text-muted">SKILL - lvl</h6>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                        <button class="btn btn-default"><span class="glyphicon glyphicon-check"></span> Offer</button>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-
-              <!-- end -->
             </div>
 
             <div class="form-group">
               <button type="submit" class="btn btn-default btn-lg">Cancel</button>
-              <button type="submit" class="btn btn-default btn-lg">Save</button>
+              <button type="submit" class="btn btn-default btn-lg">Create</button>
             </div>
           </form>
         </div>
-
-
 
       </div>
     </div>
