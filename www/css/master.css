@@ -8,8 +8,25 @@
     gray: #B4BBC3;
     lightGray: #F2F4F5;
 */
+@font-face {
+    font-family: "Exo-Regular";
+    src: url(../fonts/Exo-Regular.otf);
+}
+@font-face {
+    font-family: "Caviar_Dreams_Bold";
+    src: url(../fonts/Caviar_Dreams_Bold.ttf);
+}
 
 @media all and (min-width: 768px) {
+
+  body, p, li, ul, span {
+    font-family: Helvetica, Arial, sans-serif;
+  }
+
+  span.new-h1, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Caviar_Dreams_Bold", Helvetica, Arial, sans-serif;
+  }
+  /* Menu -------------------------------------*/
   .nav .fa {
     display: none;
   }
@@ -23,14 +40,60 @@
   div.navbar-header a.navbar-brand,
   div.navbar-header a.navbar-brand:hover,
   div.navbar-header a.navbar-brand:active,
-  div.navbar-header a.navbar-brand:visited {
+  div.navbar-header a.navbar-brand:disabled {
     background-color: #26A599;
     color: #F2F4F5;
   }
 
   div.navbar-collapse ul.navbar-nav li a,
   div.navbar-collapse ul.navbar-nav li.active,
-  div.navbar-collapse ul.navbar-nav li a:active{
+  div.navbar-collapse ul.navbar-nav li a:active,
+  div.navbar-collapse ul.navbar-nav li a:disabled{
+    background-color: #444C58;
+    color: #F2F4F5;
+  }
+
+  div.navbar-collapse ul.navbar-nav li a:hover{
+    color: #26A599;
+  }
+}
+
+@media (max-width: 768px) {
+
+  nav.navbar, nav.bar div.container-fluid {
+    background-color: #444C58;
+    color: #F2F4F5;
+  }
+
+  /*Menu buttons style*/
+  div.navbar-header a.navbar-brand,
+  div.navbar-header a.navbar-brand:hover,
+  div.navbar-header a.navbar-brand:active,
+  div.navbar-header a.navbar-brand:disabled {
+    background-color: #26A599;
+    color: #F2F4F5;
+  }
+  div.navbar-header button.navbar-toggle,
+  div.navbar-header button.navbar-toggle:hover,
+  div.navbar-header button.navbar-toggle:active,
+  div.navbar-header button.navbar-toggle:disabled,
+  div.navbar-header button.navbar-toggle:enabled {
+    background-color: #444C58;
+    color: #F2F4F5;
+    border: none;
+  }
+  div.navbar-header button.navbar-toggle span.icon-bar,
+  div.navbar-header button.navbar-toggle span.icon-bar:hover,
+  div.navbar-header button.navbar-toggle span.icon-bar:active,
+  div.navbar-header button.navbar-toggle span.icon-bar:disabled,
+  div.navbar-header button.navbar-toggle span.icon-bar:enabled {
+    background-color: #F2F4F5;
+  }
+
+  div.navbar-collapse ul.navbar-nav li a,
+  div.navbar-collapse ul.navbar-nav li.active,
+  div.navbar-collapse ul.navbar-nav li a:active,
+  div.navbar-collapse ul.navbar-nav li a:disabled{
     background-color: #444C58;
     color: #F2F4F5;
   }
