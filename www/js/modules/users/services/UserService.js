@@ -22,7 +22,7 @@ angular.module('fellowship.modules.api.services')
         'organization' : organization
       }
       ApiService.performCall('users', 'authenticate', parameters)
-        .sucess((data) => {
+        .success((data) => {
           console.log('Success Authentication');
           console.log(data);
           $q.resolve(data);
@@ -44,7 +44,7 @@ angular.module('fellowship.modules.api.services')
         'job'          : job
       }
       ApiService.performCall('users', 'register', parameters)
-        .sucess((data) => {
+        .success((data) => {
           $q.resolve(data.result);
         })
         .error((data, status) => {
