@@ -1,5 +1,5 @@
 angular.module('fellowship.controllers')
-  .controller('UserController', function($scope) {
+  .controller('UserController', function($scope, ApiService) {
 
     // Get quest information
     $scope.getUserInfo = function() {
@@ -11,8 +11,9 @@ angular.module('fellowship.controllers')
       var organizationName = document.querySelector("#org-name").value;
       var username = document.querySelector("#username").value;
       var password = document.querySelector("#password").value;
-      console.log(organizationName + ' ' + username + ' ' + password + ' - Checking authentication info, redirect');
-      var success = true;
+
+      var success = ApiService.authenticate(username, password, organizationName);
+      console.log(success);
       if (success) {
         // Redirect to our home.html
         window.location.href = "home.html";
@@ -43,7 +44,16 @@ angular.module('fellowship.controllers')
         return;
       }
 
+      var success = ApiService.register(firstName, username, password, organizationName);
       console.log('Account created!');
+      if (success) {
+        // Redirect to our home.html
+        window.location.href = "home.html";
+      }
+      else {
+        console.log('Login failed');
+        document.querySelector("#password").value = "";
+      }
       // Redirect to our home.html
       window.location.href = "home.html";
     }
