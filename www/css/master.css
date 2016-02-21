@@ -23,14 +23,15 @@
   div.navbar-header a.navbar-brand,
   div.navbar-header a.navbar-brand:hover,
   div.navbar-header a.navbar-brand:active,
-  div.navbar-header a.navbar-brand:visited {
+  div.navbar-header a.navbar-brand:disabled {
     background-color: #26A599;
     color: #F2F4F5;
   }
 
   div.navbar-collapse ul.navbar-nav li a,
   div.navbar-collapse ul.navbar-nav li.active,
-  div.navbar-collapse ul.navbar-nav li a:active{
+  div.navbar-collapse ul.navbar-nav li a:active,
+  div.navbar-collapse ul.navbar-nav li a:disabled{
     background-color: #444C58;
     color: #F2F4F5;
   }
