@@ -8,8 +8,25 @@
     gray: #B4BBC3;
     lightGray: #F2F4F5;
 */
+@font-face {
+    font-family: "Exo-Regular";
+    src: url(../fonts/Exo-Regular.otf);
+}
+@font-face {
+    font-family: "Caviar_Dreams_Bold";
+    src: url(../fonts/Caviar_Dreams_Bold.ttf);
+}
 
 @media all and (min-width: 768px) {
+
+  .body, p, li, ul, span {
+    font-family: "Exo-Regular", Helvetica, Arial, sans-serif;
+  }
+
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Caviar_Dreams_Bold", Helvetica, Arial, sans-serif;
+  }
+  /* Menu -------------------------------------*/
   .nav .fa {
     display: none;
   }
