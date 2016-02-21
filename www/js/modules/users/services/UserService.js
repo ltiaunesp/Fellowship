@@ -26,10 +26,10 @@ angular.module('fellowship.modules.api.services')
           console.log('Success Authentication');
           console.log(id);
           window.sessionStorage.userLogged = id;
-          $q.resolve(id); // return id
+          deferred.resolve(id); // return id
         }, (data, status) => {
           console.log('Fail Authentication');
-          $q.reject('error-do-auth--' + status);
+          deferred.reject('error-do-auth--' + status);
         });
       return deferred.promise;
     }
