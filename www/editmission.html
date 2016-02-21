@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>New Quest</title>
+    <title>Edit Mission</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -39,52 +39,35 @@
       <div class="row" id="center">
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <h1>CREATE NEW QUEST</h1>
+          <h1>EDIT MISSION</h1>
         </div>
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <form class="form-horizontal">
 
             <div class="form-group">
-              <label for="quest-title" class="control-label"></label>
+              <label for="mission-title" class="control-label"></label>
               <input type="text" class="form-control" id="mission-title" placeholder="Title">
             </div>
 
             <div class="form-group">
-              <label for="quest-description" class="control-label"></label>
+              <label for="mission-description" class="control-label"></label>
               <textarea class="form-control" id="mission-description" placeholder="Description"></textarea>
-            </div>
-
-            <div class="box">
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <input type="text" class="form-control" id="skill-title" placeholder="Skill Title">
-                  </div>
-                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <input type="text" class="form-control" id="skill-exp" placeholder="20">
-                  </div>
-                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <button class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> Add New Skill</button>
-                  </div>
-                </div>
-              </div>
-
-              <h4>Skill List</h4>
-                <ul class="list-unstyled">
-                  <li><b>JavaScript</b> +20 xp  <button class="btn btn-default"><span class="glyphicon glyphicon-trash"></span> Delete Skill</button></li>
-                  <li><b>JavaScript</b> +20 xp  <button class="btn btn-default"><span class="glyphicon glyphicon-trash"></span> Delete Skill</button></li>
-                  <li><b>JavaScript</b> +20 xp  <button class="btn btn-default"><span class="glyphicon glyphicon-trash"></span> Delete Skill</button></li>
-                  <li><b>JavaScript</b> +20 xp  <button class="btn btn-default"><span class="glyphicon glyphicon-trash"></span> Delete Skill</button></li>
-                  <li><b>JavaScript</b> +20 xp  <button class="btn btn-default"><span class="glyphicon glyphicon-trash"></span> Delete Skill</button></li>
-                  <li><b>JavaScript</b> +20 xp  <button class="btn btn-default"><span class="glyphicon glyphicon-trash"></span> Delete Skill</button></li>
-                </ul>
             </div>
 
             <div class="form-group">
               <button type="submit" class="btn btn-default btn-lg">Cancel</button>
-              <button type="submit" class="btn btn-default btn-lg">Create</button>
+              <button type="submit" class="btn btn-default btn-lg">Save</button>
             </div>
+
+            <hr>
+
+            <div>
+              <h3>DANGER ZONE</h3>
+              <button type="submit" class="btn btn-default btn-lg">Delete Mission</button>
+            </div>
+          </form>
+        </div>
           </form>
         </div>
 
