@@ -1,9 +1,19 @@
 angular.module('fellowship.controllers')
-  .controller('UserController', function($scope, UserService) {
+  .controller('UserController', function($scope, UserService, ProfileService) {
+
+    $scope.user = {};
 
     // Get quest information
-    $scope.getUserInfo = function() {
-      console.log('GETTING USER INFORMATION');
+    $scope.updateUserInfo = function() {
+      ProfileService.getCurrentProfile()
+        .then(
+          (user) => { // SUCCESS
+            $scope.user = user;
+          },
+          (data, status) => { // ERROR
+            console.log("The user isn't logged in system")
+          }
+        )
     }
 
     // Authenticating user
@@ -50,5 +60,5 @@ angular.module('fellowship.controllers')
       UserService.logout();
       window.location.href="index.html";
     };
-    
+
   });
