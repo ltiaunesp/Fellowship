@@ -22,12 +22,11 @@ angular.module('fellowship.modules.api.services')
         'organization' : organization
       }
       ApiService.performCall('users', 'authenticate', parameters)
-        .success((data) => {
+        .then((data) => {
           console.log('Success Authentication');
           console.log(data);
           $q.resolve(data);
-        })
-        .error((data, status) => {
+        }, (data, status) => {
           console.log('Fail Authentication');
           $q.reject('error-do-auth--' + status);
         });
@@ -44,10 +43,9 @@ angular.module('fellowship.modules.api.services')
         'job'          : job
       }
       ApiService.performCall('users', 'register', parameters)
-        .success((data) => {
+        .then((data) => {
           $q.resolve(data.result);
-        })
-        .error((data, status) => {
+        },(data, status) => {
           $q.reject('error-do-reg--' + status);
         });
       return deferred.promise;

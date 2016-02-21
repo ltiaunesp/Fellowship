@@ -14,10 +14,9 @@ angular.module('fellowship.modules.missions.services')
         owner    : owner
       }
       ApiService.performCall('missions','addquest', parameters)
-        .success( (result) => {
+        .then( (result) => {
           deferred.resolve(result);
-        })
-        .error( (data, status) => {
+        }, (data, status) => {
           deferred.reject('error-do-quest-create--'+status)
         })
 
@@ -30,10 +29,9 @@ angular.module('fellowship.modules.missions.services')
         mission  : missionid
       }
       ApiService.performCall('missions','getquests', parameters)
-        .success( (quests) => {
+        .then( (quests) => {
           deferred.resolve(quests);
-        })
-        .error( (data, status) => {
+        }, (data, status) => {
           deferred.reject('error-do-quest-list--'+status)
         })
 
@@ -47,10 +45,9 @@ angular.module('fellowship.modules.missions.services')
         questid : questid
       }
       ApiService.performCall('missions','removequests', parameters)
-        .success( (result) => {
+        .then( (result) => {
           deferred.resolve(result);
-        })
-        .error( (data, status) => {
+        }, (data, status) => {
           deferred.reject('error-do-quest-remove--'+status)
         })
 
@@ -63,10 +60,9 @@ angular.module('fellowship.modules.missions.services')
         mission  : id
       }
       ApiService.performCall('missions','getmission', parameters)
-        .success( (mission) => {
+        .then( (mission) => {
           deferred.resolve(mission);
-        })
-        .error( (data, status) => {
+        }, (data, status) => {
           deferred.reject('error-do-get-mission--'+status)
         })
 
@@ -79,10 +75,9 @@ angular.module('fellowship.modules.missions.services')
         mission  : id
       }
       ApiService.performCall('missions','getmission', parameters)
-        .success( (mission) => {
+        .then( (mission) => {
           deferred.resolve(mission);
-        })
-        .error( (data, status) => {
+        }, (data, status) => {
           deferred.reject('error-do-get-mission--'+status)
         })
 
@@ -96,10 +91,9 @@ angular.module('fellowship.modules.missions.services')
         newmission : mission
       }
       ApiService.performCall('missions','updatemission', parameters)
-        .success( (mission) => {
+        .then( (mission) => {
           deferred.resolve(mission);
-        })
-        .error( (data, status) => {
+        }, (data, status) => {
           deferred.reject('error-do-get-mission--'+status)
         })
 
