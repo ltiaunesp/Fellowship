@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/project.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/master.css">
 
     <!--  ANGULAR -->
     <script src="js/angular.min.js" charset="utf-8"></script>
@@ -58,8 +59,9 @@
     <script src="js/app.js" charset="utf-8"></script>
 
   </head>
-  <body ng-app="fellowship" ng-controller="AppController" ng-init="redirectIfNotLoggedIn()">
+  <!-- <body ng-app="fellowship" ng-controller="AppController" ng-init="redirectIfNotLoggedIn()"> -->
 
+<body>
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -74,7 +76,7 @@
 
         <div class="collapse navbar-collapse" id="collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
             <li><a href="#"><i class="fa fa-users"></i> Members</a></li>
             <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
           </ul>
@@ -92,6 +94,8 @@
             <p class="text-justify">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat risus felis, sed pellentesque tellus dapibus eu. Nulla sed dolor posuere, aliquam turpis id, tincidunt orci. Phasellus metus nunc, porta ut faucibus sit amet, maximus in est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris et elit sed nisi sollicitudin eleifend nec ut purus. Sed molestie augue sed mollis imperdiet. Curabitur sit amet ipsum in velit consequat blandit. Ut sollicitudin sem porta libero aliquam, et volutpat est scelerisque. Nulla imperdiet hendrerit risus, id porta purus gravida et. Nunc mi ante, ultricies sit amet varius a, euismod nec erat. Fusce nunc erat, vulputate ut ultricies ut, mollis ac tellus.
             </p>
+            <h4><span class="glyphicon glyphicon-calendar"></span> Start Date: mm/dd/yyyy</h4>
+            <h4><span class="glyphicon glyphicon-calendar"></span> Due Date: mm/dd/yyyy</h4>
         </div>
         <div class="col-lg-2 col-md-2 col-sm-2">
           <button type="button" name="button" class="btn btn-default btn-md pull-right"><a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a></button>
@@ -99,41 +103,69 @@
       </div>
 
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <br><h1>Missions</h1>
         </div>
       </div>
       <div class="row box">
-        <div class="col-lg-12">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
           <!-- New Mission -->
-          <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
-            <a class="btn btn-primary" data-toggle="collapse" href="#newMission" aria-expanded="false" aria-controls="newMission">
-              <span class="glyphicon glyphicon-plus"></span> Add New Mission
-            </a>
-          </p>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <button class="btn btn-primary pull-right" data-toggle="collapse" href="#collapseMissionOne" aria-expanded="true" aria-controls="newMission">
+              <span class="glyphicon glyphicon-chevron-right"></span> Add New Mission
+            </button>
+          </div>
 
           <!-- Mission 1 -->
-          <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
-            <a class="btn btn-primary" data-toggle="collapse" href="#collapseMissionOne" aria-expanded="true" aria-controls="collapseMissionOne">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+            <button class="btn btn-primary col-lg-12 col-md-12 col-sm-12 col-xs-12" data-toggle="collapse" href="#collapseMissionOne" aria-expanded="true" aria-controls="collapseMissionOne">
               <span class="glyphicon glyphicon-chevron-right"></span> Mission #1 - Plan a meeting to plan the next meeting
-            </a>
-          </p>
+            </button>
+            <div class="mission-info col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <h6>DESCRIPTION</h6>
+              <p class="text-justify">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat risus felis, sed pellentesque tellus dapibus eu. Nulla sed dolor posuere, aliquam turpis id, tincidunt orci. Phasellus metus nunc, porta ut faucibus sit amet, maximus in est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris et elit sed nisi sollicitudin eleifend nec ut purus. Sed molestie augue sed mollis imperdiet. Curabitur sit amet ipsum in velit consequat blandit. Ut sollicitudin sem porta libero aliquam, et volutpat est scelerisque. Nulla imperdiet hendrerit risus, id porta purus gravida et. Nunc mi ante, ultricies sit amet varius a, euismod nec erat. Fusce nunc erat, vulputate ut ultricies ut, mollis ac tellus.
+              </p>
+            </div>
+          </div>
+
           <div class="collapse" id="collapseMissionOne">
             <div class="card card-block">
 
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <h6>DESCRIPTION</h6>
-                <p class="text-justify">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat risus felis, sed pellentesque tellus dapibus eu. Nulla sed dolor posuere, aliquam turpis id, tincidunt orci. Phasellus metus nunc, porta ut faucibus sit amet, maximus in est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris et elit sed nisi sollicitudin eleifend nec ut purus. Sed molestie augue sed mollis imperdiet. Curabitur sit amet ipsum in velit consequat blandit. Ut sollicitudin sem porta libero aliquam, et volutpat est scelerisque. Nulla imperdiet hendrerit risus, id porta purus gravida et. Nunc mi ante, ultricies sit amet varius a, euismod nec erat. Fusce nunc erat, vulputate ut ultricies ut, mollis ac tellus.
-                </p>
-              </div>
 
               <!-- Add New Quest -->
               <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="card-content row">
-                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h4 class="card-title"><span class="glyphicon glyphicon-plus"></span> Add New Quest</h4>
+                    <button type="button" name="button" class="btn btn-default btn-lg pull-right col-lg-12 col-md-12 col-sm-12 col-xs-12"><a href="#"><span class="glyphicon glyphicon-plus"></span> Add New Quest</a></button>
+                </div>
+              </div>
+
+              <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="card-content row">
+                  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                    <h4 class="card-title">Quest Title</h4>
+                    <h6 class="card-subtitle text-muted">(Due Date)</h6>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <button type="button" name="button" class="btn btn-default btn-md pull-right"><a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a></button>
+                    <button class="btn btn-default btn-md pull-right" data-toggle="collapse" href="#collapseQuest1" aria-expanded="true" aria-controls="collapseQuest1"><a href="#"><a href="#"><span class="glyphicon glyphicon-resize-full"></span> Show Details</a></a></button>
+                  </div>
+                  <div class="collapse" id="collapseQuest1">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
+                      <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
+                      <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <h6 class="card-subtitle text-muted"><span class="glyphicon glyphicon-user"></span> FName LName</h6>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <h6 class="card-subtitle text-muted"> DESCRIPTION</h6>
+                      <p class="text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat quam non felis pulvinar, id consectetur augue efficitur. Aliquam eget cursus nisi. Mauris fringilla suscipit nisl, iaculis euismod diam sodales aliquet. Cras semper sagittis lorem eu molestie.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -146,46 +178,23 @@
                   </div>
                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <button type="button" name="button" class="btn btn-default btn-md pull-right"><a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a></button>
+                    <button class="btn btn-default btn-md pull-right" data-toggle="collapse" href="#collapseQuest2" aria-expanded="true" aria-controls="collapseQuest2"><a href="#"><span class="glyphicon glyphicon-resize-full"></span> Show Details</a></button>
                   </div>
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <h6 class="card-subtitle text-muted"><span class="glyphicon glyphicon-user"></span> FName LName</h6>
-                  </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h6 class="card-subtitle text-muted"> DESCRIPTION</h6>
-                    <p class="text-justify">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat quam non felis pulvinar, id consectetur augue efficitur. Aliquam eget cursus nisi. Mauris fringilla suscipit nisl, iaculis euismod diam sodales aliquet. Cras semper sagittis lorem eu molestie.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="card-content row">
-                  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                    <h4 class="card-title">Quest Title</h4>
-                    <h6 class="card-subtitle text-muted">(Due Date)</h6>
-                  </div>
-                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <button type="button" name="button" class="btn btn-default btn-md pull-right"><a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a></button>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <h6 class="card-subtitle text-muted"><span class="glyphicon glyphicon-user"></span> FName LName</h6>
-                  </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h6 class="card-subtitle text-muted"> DESCRIPTION</h6>
-                    <p class="text-justify">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat quam non felis pulvinar, id consectetur augue efficitur. Aliquam eget cursus nisi. Mauris fringilla suscipit nisl, iaculis euismod diam sodales aliquet. Cras semper sagittis lorem eu molestie.
-                    </p>
+                  <div class="collapse" id="collapseQuest2">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
+                      <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
+                      <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <h6 class="card-subtitle text-muted"><span class="glyphicon glyphicon-user"></span> FName LName</h6>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <h6 class="card-subtitle text-muted"> DESCRIPTION</h6>
+                      <p class="text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat quam non felis pulvinar, id consectetur augue efficitur. Aliquam eget cursus nisi. Mauris fringilla suscipit nisl, iaculis euismod diam sodales aliquet. Cras semper sagittis lorem eu molestie.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -198,46 +207,23 @@
                   </div>
                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <button type="button" name="button" class="btn btn-default btn-md pull-right"><a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a></button>
+                    <button class="btn btn-default btn-md pull-right" data-toggle="collapse" href="#collapseQuest3" aria-expanded="true" aria-controls="collapseQuest3"><a href="#"><span class="glyphicon glyphicon-resize-full"></span> Show Details</a></button>
                   </div>
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <h6 class="card-subtitle text-muted"><span class="glyphicon glyphicon-user"></span> FName LName</h6>
-                  </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h6 class="card-subtitle text-muted"> DESCRIPTION</h6>
-                    <p class="text-justify">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat quam non felis pulvinar, id consectetur augue efficitur. Aliquam eget cursus nisi. Mauris fringilla suscipit nisl, iaculis euismod diam sodales aliquet. Cras semper sagittis lorem eu molestie.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="card-content row">
-                  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                    <h4 class="card-title">Quest Title</h4>
-                    <h6 class="card-subtitle text-muted">(Due Date)</h6>
-                  </div>
-                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <button type="button" name="button" class="btn btn-default btn-md pull-right"><a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a></button>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <h6 class="card-subtitle text-muted"><span class="glyphicon glyphicon-user"></span> FName LName</h6>
-                  </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h6 class="card-subtitle text-muted"> DESCRIPTION</h6>
-                    <p class="text-justify">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat quam non felis pulvinar, id consectetur augue efficitur. Aliquam eget cursus nisi. Mauris fringilla suscipit nisl, iaculis euismod diam sodales aliquet. Cras semper sagittis lorem eu molestie.
-                    </p>
+                  <div class="collapse" id="collapseQuest3">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
+                      <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
+                      <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <h6 class="card-subtitle text-muted"><span class="glyphicon glyphicon-user"></span> FName LName</h6>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <h6 class="card-subtitle text-muted"> DESCRIPTION</h6>
+                      <p class="text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat quam non felis pulvinar, id consectetur augue efficitur. Aliquam eget cursus nisi. Mauris fringilla suscipit nisl, iaculis euismod diam sodales aliquet. Cras semper sagittis lorem eu molestie.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -250,20 +236,52 @@
                   </div>
                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <button type="button" name="button" class="btn btn-default btn-md pull-right"><a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a></button>
+                    <button class="btn btn-default btn-md pull-right" data-toggle="collapse" href="#collapseQuest4" aria-expanded="true" aria-controls="collapseQuest4"><a href="#"><span class="glyphicon glyphicon-resize-full"></span> Show Details</a></button>
                   </div>
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
+                  <div class="collapse" id="collapseQuest4">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
+                      <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
+                      <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <h6 class="card-subtitle text-muted"><span class="glyphicon glyphicon-user"></span> FName LName</h6>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <h6 class="card-subtitle text-muted"> DESCRIPTION</h6>
+                      <p class="text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat quam non felis pulvinar, id consectetur augue efficitur. Aliquam eget cursus nisi. Mauris fringilla suscipit nisl, iaculis euismod diam sodales aliquet. Cras semper sagittis lorem eu molestie.
+                      </p>
+                    </div>
                   </div>
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <h6 class="card-subtitle text-muted"><span class="glyphicon glyphicon-user"></span> FName LName</h6>
+                </div>
+              </div>
+
+              <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="card-content row">
+                  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                    <h4 class="card-title">Quest Title</h4>
+                    <h6 class="card-subtitle text-muted">(Due Date)</h6>
                   </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h6 class="card-subtitle text-muted"> DESCRIPTION</h6>
-                    <p class="text-justify">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat quam non felis pulvinar, id consectetur augue efficitur. Aliquam eget cursus nisi. Mauris fringilla suscipit nisl, iaculis euismod diam sodales aliquet. Cras semper sagittis lorem eu molestie.
-                    </p>
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <button type="button" name="button" class="btn btn-default btn-md pull-right"><a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a></button>
+                    <button class="btn btn-default btn-md pull-right" data-toggle="collapse" href="#collapseQuest5" aria-expanded="true" aria-controls="collapseQuest5"><a href="#"><span class="glyphicon glyphicon-resize-full"></span> Show Details</a></button>
+                  </div>
+                  <div class="collapse" id="collapseQuest5">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
+                      <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
+                      <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <h6 class="card-subtitle text-muted"><span class="glyphicon glyphicon-user"></span> FName LName</h6>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <h6 class="card-subtitle text-muted"> DESCRIPTION</h6>
+                      <p class="text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat quam non felis pulvinar, id consectetur augue efficitur. Aliquam eget cursus nisi. Mauris fringilla suscipit nisl, iaculis euismod diam sodales aliquet. Cras semper sagittis lorem eu molestie.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -271,164 +289,6 @@
             </div>
           </div>
 
-
-          <!-- Mission 2 -->
-          <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
-            <a class="btn btn-primary" data-toggle="collapse" href="#collapseMission2" aria-expanded="true" aria-controls="collapseMission2">
-              <span class="glyphicon glyphicon-chevron-right"></span> Mission #1 - Plan a meeting to plan the next meeting
-            </a>
-          </p>
-          <div class="collapse" id="collapseMission2">
-            <div class="card card-block">
-
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <h6>DESCRIPTION</h6>
-                <p class="text-justify">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat risus felis, sed pellentesque tellus dapibus eu. Nulla sed dolor posuere, aliquam turpis id, tincidunt orci. Phasellus metus nunc, porta ut faucibus sit amet, maximus in est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris et elit sed nisi sollicitudin eleifend nec ut purus. Sed molestie augue sed mollis imperdiet. Curabitur sit amet ipsum in velit consequat blandit. Ut sollicitudin sem porta libero aliquam, et volutpat est scelerisque. Nulla imperdiet hendrerit risus, id porta purus gravida et. Nunc mi ante, ultricies sit amet varius a, euismod nec erat. Fusce nunc erat, vulputate ut ultricies ut, mollis ac tellus.
-                </p>
-              </div>
-
-              <!-- Add New Quest -->
-              <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="card-content row">
-                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h4 class="card-title"><span class="glyphicon glyphicon-plus"></span> Add New Quest</h4>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="card-content row">
-                  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                    <h4 class="card-title">Quest Title</h4>
-                    <h6 class="card-subtitle text-muted">(Due Date)</h6>
-                  </div>
-                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <button type="button" name="button" class="btn btn-default btn-md pull-right"><a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a></button>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <h6 class="card-subtitle text-muted"><span class="glyphicon glyphicon-user"></span> FName LName</h6>
-                  </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h6 class="card-subtitle text-muted"> DESCRIPTION</h6>
-                    <p class="text-justify">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat quam non felis pulvinar, id consectetur augue efficitur. Aliquam eget cursus nisi. Mauris fringilla suscipit nisl, iaculis euismod diam sodales aliquet. Cras semper sagittis lorem eu molestie.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="card-content row">
-                  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                    <h4 class="card-title">Quest Title</h4>
-                    <h6 class="card-subtitle text-muted">(Due Date)</h6>
-                  </div>
-                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <button type="button" name="button" class="btn btn-default btn-md pull-right"><a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a></button>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <h6 class="card-subtitle text-muted"><span class="glyphicon glyphicon-user"></span> FName LName</h6>
-                  </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h6 class="card-subtitle text-muted"> DESCRIPTION</h6>
-                    <p class="text-justify">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat quam non felis pulvinar, id consectetur augue efficitur. Aliquam eget cursus nisi. Mauris fringilla suscipit nisl, iaculis euismod diam sodales aliquet. Cras semper sagittis lorem eu molestie.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="card-content row">
-                  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                    <h4 class="card-title">Quest Title</h4>
-                    <h6 class="card-subtitle text-muted">(Due Date)</h6>
-                  </div>
-                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <button type="button" name="button" class="btn btn-default btn-md pull-right"><a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a></button>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <h6 class="card-subtitle text-muted"><span class="glyphicon glyphicon-user"></span> FName LName</h6>
-                  </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h6 class="card-subtitle text-muted"> DESCRIPTION</h6>
-                    <p class="text-justify">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat quam non felis pulvinar, id consectetur augue efficitur. Aliquam eget cursus nisi. Mauris fringilla suscipit nisl, iaculis euismod diam sodales aliquet. Cras semper sagittis lorem eu molestie.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="card-content row">
-                  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                    <h4 class="card-title">Quest Title</h4>
-                    <h6 class="card-subtitle text-muted">(Due Date)</h6>
-                  </div>
-                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <button type="button" name="button" class="btn btn-default btn-md pull-right"><a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a></button>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <h6 class="card-subtitle text-muted"><span class="glyphicon glyphicon-user"></span> FName LName</h6>
-                  </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h6 class="card-subtitle text-muted"> DESCRIPTION</h6>
-                    <p class="text-justify">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat quam non felis pulvinar, id consectetur augue efficitur. Aliquam eget cursus nisi. Mauris fringilla suscipit nisl, iaculis euismod diam sodales aliquet. Cras semper sagittis lorem eu molestie.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="card-content row">
-                  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                    <h4 class="card-title">Quest Title</h4>
-                    <h6 class="card-subtitle text-muted">(Due Date)</h6>
-                  </div>
-                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <button type="button" name="button" class="btn btn-default btn-md pull-right"><a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a></button>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                    <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <h6 class="card-subtitle text-muted"><span class="glyphicon glyphicon-user"></span> FName LName</h6>
-                  </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h6 class="card-subtitle text-muted"> DESCRIPTION</h6>
-                    <p class="text-justify">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat quam non felis pulvinar, id consectetur augue efficitur. Aliquam eget cursus nisi. Mauris fringilla suscipit nisl, iaculis euismod diam sodales aliquet. Cras semper sagittis lorem eu molestie.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
         </div>
       </div>
 
@@ -439,61 +299,128 @@
       </div>
       <div class="row box">
         <div class="col-lg-12">
-          <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
-            <a class="btn btn-primary" data-toggle="collapse" href="#collapseMembers" aria-expanded="false" aria-controls="collapseMembers">
+
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+            <button class="btn btn-primary col-lg-12 col-md-12 col-sm-12 col-xs-12" data-toggle="collapse" href="#collapseMembers" aria-expanded="true" aria-controls="collapseMembers">
               <span class="glyphicon glyphicon-user"></span> (8 Members) @username1, @username2, ...
-            </a>
-          </p>
+            </button>
+          </div>
+
           <div class="collapse" id="collapseMembers">
             <div class="card card-block">
 
               <!-- Add New Quest -->
               <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="card-content row">
-                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h4 class="card-title"><span class="glyphicon glyphicon-plus"></span> Add New Member</h4>
-                  </div>
-                </div>
-              </div>
-              <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="card-content row">
-                  <div class="no-padding col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <!-- Image -->
-                    <div class="user-image"></div>
-                  </div>
-                  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                    <h4 class="card-title">FName LName</h4>
-                    <h6 class="card-subtitle text-muted">Occupation</h6>
-                    <a href="#" class="card-link">View Profile</a>
-                  </div>
+                  <button type="button" name="button" class="btn btn-default btn-lg pull-right col-lg-12 col-md-12 col-sm-12 col-xs-12"><a href="#"><span class="glyphicon glyphicon-plus"></span> Add New Member Slot</a></button>
                 </div>
               </div>
 
               <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="card-content row">
-                  <div class="no-padding col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <!-- Image -->
-                    <div class="user-image"></div>
+                  <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                      <!-- Image -->
+                      <div class="user-image"></div>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                      <h4 class="card-title">(No Name)</h4>
+                      <h6 class="card-subtitle text-muted">Occupation</h6>
+                      </div>
                   </div>
-                  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                    <h4 class="card-title">FName LName</h4>
-                    <h6 class="card-subtitle text-muted">Occupation</h6>
-                    <a href="#" class="card-link">View Profile</a>
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <h6 class="card-subtitle text-muted">SKILL</h6>
+                      <h6 class="card-subtitle text-muted">SKILL</h6>
+                      <h6 class="card-subtitle text-muted">SKILL</h6>
+                    </div>
                   </div>
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <button type="button" name="button" class="btn btn-default btn-lg pull-right col-lg-12 col-md-12 col-sm-12 col-xs-12" data-toggle="modal" data-target="#chooseMemberModal"><a href="#"><span class="glyphicon glyphicon-plus"></span> Choose Member</a></button>
+                    </div>
+                </div>
                 </div>
               </div>
 
               <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="card-content row">
-                  <div class="no-padding col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <!-- Image -->
-                    <div class="user-image"></div>
+                  <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                      <!-- Image -->
+                      <div class="user-image"></div>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                      <h4 class="card-title">(No Name)</h4>
+                      <h6 class="card-subtitle text-muted">Occupation</h6>
+                      </div>
                   </div>
-                  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                    <h4 class="card-title">FName LName</h4>
-                    <h6 class="card-subtitle text-muted">Occupation</h6>
-                    <a href="#" class="card-link">View Profile</a>
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <h6 class="card-subtitle text-muted">SKILL</h6>
+                      <h6 class="card-subtitle text-muted">SKILL</h6>
+                      <h6 class="card-subtitle text-muted">SKILL</h6>
+                    </div>
                   </div>
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <button type="button" name="button" class="btn btn-default btn-lg pull-right col-lg-12 col-md-12 col-sm-12 col-xs-12" data-toggle="modal" data-target="#chooseMemberModal"><a href="#"><span class="glyphicon glyphicon-plus"></span> Choose Member</a></button>
+                    </div>
+                </div>
+                </div>
+              </div>
+
+              <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="card-content row">
+                  <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                      <!-- Image -->
+                      <div class="user-image"></div>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                      <h4 class="card-title">(No Name)</h4>
+                      <h6 class="card-subtitle text-muted">Occupation</h6>
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <h6 class="card-subtitle text-muted">SKILL</h6>
+                      <h6 class="card-subtitle text-muted">SKILL</h6>
+                      <h6 class="card-subtitle text-muted">SKILL</h6>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <button type="button" name="button" class="btn btn-default btn-lg pull-right col-lg-12 col-md-12 col-sm-12 col-xs-12" data-toggle="modal" data-target="#chooseMemberModal"><a href="#"><span class="glyphicon glyphicon-plus"></span> Choose Member</a></button>
+                    </div>
+                </div>
+                </div>
+              </div>
+
+              <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="card-content row">
+                  <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                      <!-- Image -->
+                      <div class="user-image"></div>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                      <h4 class="card-title">(No Name)</h4>
+                      <h6 class="card-subtitle text-muted">Occupation</h6>
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <h6 class="card-subtitle text-muted">SKILL</h6>
+                      <h6 class="card-subtitle text-muted">SKILL</h6>
+                      <h6 class="card-subtitle text-muted">SKILL</h6>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <button type="button" name="button" class="btn btn-default btn-lg pull-right col-lg-12 col-md-12 col-sm-12 col-xs-12" data-toggle="modal" data-target="#chooseMemberModal"><a href="#"><span class="glyphicon glyphicon-plus"></span> Choose Member</a></button>
+                    </div>
+                </div>
                 </div>
               </div>
 
@@ -502,6 +429,126 @@
         </div>
       </div>
 
+    </div>
+
+    <!-- Modal - Choose member -->
+    <!-- Modal -->
+    <div id="chooseMemberModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Choose Member</h4>
+          </div>
+          <div class="modal-body">
+            <div class="list-group">
+              <a href="#" class="list-group-item active">
+                APPLICANTS
+              </a>
+              <a href="#" class="list-group-item">
+                <div class="row">
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
+                    <!-- Image -->
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 user-image"></div>
+                  </div>
+                  <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                    <h4 class="card-title">(No Name)</h4>
+                    <h6 class="card-subtitle text-muted">Occupation</h6>
+                    <h6 class="card-subtitle text-muted">LVL - SKILL</h6>
+                    <h6 class="card-subtitle text-muted">LVL - SKILL</h6>
+                    <h6 class="card-subtitle text-muted">LVL - SKILL</h6>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="list-group-item">
+                <div class="row">
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
+                    <!-- Image -->
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 user-image"></div>
+                  </div>
+                  <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                    <h4 class="card-title">(No Name)</h4>
+                    <h6 class="card-subtitle text-muted">Occupation</h6>
+                    <h6 class="card-subtitle text-muted">LVL - SKILL</h6>
+                    <h6 class="card-subtitle text-muted">LVL - SKILL</h6>
+                    <h6 class="card-subtitle text-muted">LVL - SKILL</h6>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="list-group-item">
+                <div class="row">
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
+                    <!-- Image -->
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 user-image"></div>
+                  </div>
+                  <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                    <h4 class="card-title">(No Name)</h4>
+                    <h6 class="card-subtitle text-muted">Occupation</h6>
+                    <h6 class="card-subtitle text-muted">LVL - SKILL</h6>
+                    <h6 class="card-subtitle text-muted">LVL - SKILL</h6>
+                    <h6 class="card-subtitle text-muted">LVL - SKILL</h6>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="list-group-item">
+                <div class="row">
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
+                    <!-- Image -->
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 user-image"></div>
+                  </div>
+                  <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                    <h4 class="card-title">(No Name)</h4>
+                    <h6 class="card-subtitle text-muted">Occupation</h6>
+                    <h6 class="card-subtitle text-muted">LVL - SKILL</h6>
+                    <h6 class="card-subtitle text-muted">LVL - SKILL</h6>
+                    <h6 class="card-subtitle text-muted">LVL - SKILL</h6>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="list-group-item active">
+                SUGGESTED
+              </a>
+              <a href="#" class="list-group-item">
+                <div class="row">
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
+                    <!-- Image -->
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 user-image"></div>
+                  </div>
+                  <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                    <h4 class="card-title">(No Name)</h4>
+                    <h6 class="card-subtitle text-muted">Occupation</h6>
+                    <h6 class="card-subtitle text-muted">LVL - SKILL</h6>
+                    <h6 class="card-subtitle text-muted">LVL - SKILL</h6>
+                    <h6 class="card-subtitle text-muted">LVL - SKILL</h6>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="list-group-item">
+                <div class="row">
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
+                    <!-- Image -->
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 user-image"></div>
+                  </div>
+                  <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                    <h4 class="card-title">(No Name)</h4>
+                    <h6 class="card-subtitle text-muted">Occupation</h6>
+                    <h6 class="card-subtitle text-muted">LVL - SKILL</h6>
+                    <h6 class="card-subtitle text-muted">LVL - SKILL</h6>
+                    <h6 class="card-subtitle text-muted">LVL - SKILL</h6>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+          </div>
+        </div>
+
+      </div>
     </div>
 
     <script src="js/jquery-2.2.0.min.js"></script>

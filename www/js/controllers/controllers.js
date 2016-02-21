@@ -22,4 +22,8 @@ angular.module('fellowship.controllers', ['fellowship.modules'])
         }, (data, status) => {
         });
     }
+    $scope.logout = function(){
+      sessionStorage.clear();
+      window.location.href="index.html"
+    }
 });
