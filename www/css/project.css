@@ -30,4 +30,8 @@
     max-height: 700px;
     overflow-y:scroll;
   }
+
+  .show-on-edit {
+    display: none;
+  }
 }
