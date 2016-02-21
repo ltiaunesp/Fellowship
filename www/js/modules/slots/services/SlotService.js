@@ -9,10 +9,9 @@ angular.module('fellowship.modules.slots.services')
         'id'         : id
       }
       ApiService.performCall('slots', 'get', parameters)
-        .success((data) => {
+        .then((data) => {
           deferred.resolve(data.result);
-        })
-        .error((status) => {
+        },(data,status) => {
           deferred.reject('error-do-req-slot-' + status);
         });
       return deferred.promise;
@@ -21,11 +20,11 @@ angular.module('fellowship.modules.slots.services')
     service.getSlotRecomendations = function(id){
       var deferred = $q.defer();
       service.getSlot(id)
-        .success((slot) => {
+        .then((slot) => {
           var members = new Set();
           var appliers = slot.appliers;
           ProfileService.getAllProfiles()
-            .success( (profiles) => {
+            .then( (profiles) => {
               profiles.forEach((profile,index) => {
                 slot.skills.forEach( (skill,index) => {
                   if(profile.skills[skill.name] >= skill.value || appliers.indexOf(profile.id) !=1)
@@ -33,12 +32,10 @@ angular.module('fellowship.modules.slots.services')
                 });
               });
               deferred.resolve(Array.from(members));
-            })
-            .error((status) => {
+            }, (data,status) => {
               deferred.reject('error-cant-get-profiles-'+status)
             })
-        })
-        .error((status) => {
+        },(data,status) => {
           deferred.reject('error-cant-get-slot-'+status)
 
         })
@@ -52,10 +49,9 @@ angular.module('fellowship.modules.slots.services')
         skills : skills
       }
       Api.performCall('slots','setskills', parameters)
-        .success((data) => {
+        .then((data) => {
           deferred.resolve(data);
-        })
-        .error((status) => {
+        }, (data,status) => {
           deferred.reject('error-do-set-skills-' + status);
         })
     }
@@ -63,23 +59,21 @@ angular.module('fellowship.modules.slots.services')
     service.applySlot = function(id){
       var deferred = $q.defer();
       UserService.verifyLogin()
-        .success((uid) => { // userID
+        .then((uid) => { // userID
           if(uid){
             var parameters = {
               'id'   : id,
               'user' : uid
             }
             ApiService.performCall('slots','apply', parameters)
-              .success((result) => {
+              .then((result) => {
                 deferred.resolve(result);
-              })
-              .error((status) => {
+              }, (data, status) => {
                 deferred.reject('error-fail-to-apply-'+status)
               })
           }else
             deferred.reject("error-user-not-logged")
-        })
-        .error((status) => {
+        }, (data, status) => {
           deferred.reject('error-cant-verify-login');
         });
       return deferred.promise;
@@ -88,7 +82,7 @@ angular.module('fellowship.modules.slots.services')
     service.allocMember = function(id, userid){
       var deferred = $q.defer();
       UserService.verifyLogin()
-        .success((uid) => { // The back-end system will verify if that user have permission to allocate members.
+        .then((uid) => { // The back-end system will verify if that user have permission to allocate members.
           if(uid){
             var parameters = {
               'id'   : id,
@@ -96,16 +90,14 @@ angular.module('fellowship.modules.slots.services')
               'performerId' : uid
             }
             ApiService.performCall('slots','allocate', parameters)
-              .success((result) => {
+              .then((result) => {
                 deferred.resolve(result);
-              })
-              .error((status) => {
+              }, ( data, status) => {
                 deferred.reject('error-fail-to-allocate-member-'+status)
               })
           }else
             deferred.reject("error-user-not-logged")
-        })
-        .error((status) => {
+        }, (data, status) => {
           deferred.reject('error-cant-verify-login');
         });
       return deferred.promise;
@@ -114,17 +106,15 @@ angular.module('fellowship.modules.slots.services')
     service.acceptApply = function(idSlot, idMember){
       var deferred = $q.defer();
       service.getSlot(idSlot)
-        .success((result) => {
+        .then((result) => {
           if(result.user == false)
             service.allocMember(idSlot, idMember)
-              .success((result) => {
+              .then((result) => {
                 deferred.resolve(result);
-              })
-              error((status) => {
+              }, (data, status) => {
                 deferred.reject("error-cant-alocate-member-" + status);
               })
-        })
-        .error((status) => {
+        }, (data,status) => {
           deferred.reject("error-cant-get-slot-"+status);
         });
       return deferred.promise;

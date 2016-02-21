@@ -8,10 +8,9 @@ angular.module('fellowship.modules.quests.services')
         'id' : id
       }
       ApiService.performCall('quests', 'get', parameters)
-        .success( (quest) => {
+        .then( (quest) => {
           deferred.resolve(quest);
-        })
-        .error( (data, status) => {
+        },(data, status) => {
           deferred.reject("error-do-quest-req--"+status);
         });
       return deferred.promise;
@@ -24,10 +23,9 @@ angular.module('fellowship.modules.quests.services')
         'quest': quest
       }
       ApiService.performCall('quests', 'update', parameters)
-        .success( (data) => { // probably will return true or false. True for success and False for Fail
+        .then( (data) => { // probably will return true or false. True for success and False for Fail
           deferred.resolve(data);
-        })
-        .error( (data, status) => {
+        }, (data, status) => {
           deferred.reject("error-do-quest-update--"+status);
         });
       return deferred.promise;
@@ -36,25 +34,24 @@ angular.module('fellowship.modules.quests.services')
     service.applyQuest = function(id){
       var deferred = $q.defer();
       service.getQuest(id)
-        .success( (quest) => {
+        .then( (quest) => {
           var isAvailable = !quest.owner;
           if(isAvailableApply){
             UserService.verifyLogin()
-              .success( (userID) => {
+              .then( (userID) => {
                 quest.owner = userID;
                 service.updateQuest(id, quest)
-                  .success( deferred.resolve )
-                  .error( (data,status) => {
+                  .then( (result) => {
+                    deferred.resolve
+                  }, (data,status) => {
                     deferred.reject("error-cant-update-user-data--" + status);
                   })
-              })
-              .error( (data, status) => {
+              }, (data, status) => {
                 deferred.reject("error-cant-get-user-id--" + status)
               })
           }
 
-        })
-        .error( (data, status) => {
+        }, (data, status) => {
           deferer.reject("error-cant-get-quest--"+status)
         })
     }

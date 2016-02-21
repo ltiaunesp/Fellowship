@@ -1,5 +1,5 @@
 angular.module('fellowship.controllers')
-  .controller('UserController', function($scope, UserService) {
+  .controller('UserController', function($scope, $location, UserService) {
 
     // Get quest information
     $scope.getUserInfo = function() {
@@ -16,7 +16,7 @@ angular.module('fellowship.controllers')
       .then( (result) => {
         console.log('Logged in!');
         // Redirect to our home.html
-        window.location.href = "home.html";
+        window.location.href="home.html";
       }, (data, status) => {
         console.log('Error: ' + status);
       });
@@ -46,7 +46,7 @@ angular.module('fellowship.controllers')
       .then( (result) => {
         console.log('Account created!');
         // Redirect to our home.html
-        window.location.href = "home.html";
+        window.location.href="home.html";
       }, (data, status) => {
         console.log("Error: " + status);
       });
