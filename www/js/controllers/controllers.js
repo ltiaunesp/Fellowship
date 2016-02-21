@@ -5,9 +5,9 @@ angular.module('fellowship.controllers', ['fellowship.modules'])
     .then( (result) => {
       console.log('Logged in!');
       // Redirect to our home.html
-      $location.url("home.html");
+      window.location.href="home.html";
     }, (data, status) => {
       console.log('Please log in.');
-      $location("login.html");
+      window.location.href="login.html";
     });
   });
