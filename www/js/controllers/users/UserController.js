@@ -1,5 +1,5 @@
 angular.module('fellowship.controllers')
-  .controller('UserController', function($scope, ApiService) {
+  .controller('UserController', function($scope, UserService) {
 
     // Get quest information
     $scope.getUserInfo = function() {
@@ -12,17 +12,16 @@ angular.module('fellowship.controllers')
       var username = document.querySelector("#username").value;
       var password = document.querySelector("#password").value;
 
-      var success = ApiService.authenticate(username, password, organizationName);
-      console.log(success);
-      if (success) {
+      UserService.authenticate(username, password, organizationName)
+      .success( (result) => {
+        console.log('Logged in!');
         // Redirect to our home.html
         window.location.href = "home.html";
-      }
-      else {
-        console.log('Login failed');
-        document.querySelector("#password").value = "";
-      }
-    }
+      })
+      .error( (data, status) => {
+        console.log('Error: ' + status);
+      });
+    };
 
     // Logging out the user
     $scope.logout = function() {
@@ -44,18 +43,15 @@ angular.module('fellowship.controllers')
         return;
       }
 
-      var success = ApiService.register(firstName, username, password, organizationName);
-      console.log('Account created!');
-      if (success) {
+      UserService.register(firstName, username, password, 'Member', organizationName)
+      .success( (result) => {
+        console.log('Account created!');
         // Redirect to our home.html
         window.location.href = "home.html";
-      }
-      else {
-        console.log('Login failed');
-        document.querySelector("#password").value = "";
-      }
-      // Redirect to our home.html
-      window.location.href = "home.html";
-    }
+      })
+      .error( (data, status) => {
+        console.log("Error: " + status);
+      });
+    };
 
   });
