@@ -19,7 +19,7 @@
 
 @media all and (min-width: 768px) {
 
-  .body, p, li, ul, span {
+  body, p, li, ul, span {
     font-family: "Exo-Regular", Helvetica, Arial, sans-serif;
   }
 
