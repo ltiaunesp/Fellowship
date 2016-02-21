@@ -58,3 +58,13 @@ img {
     text-align: center;
   }
 }
+
+.thumbnail {
+  min-height: 190px;
+  min-width: 300px;
+  margin-bottom: 0px;
+}
+
+.box .col-lg-4, .box .col-md-6, .box .col-sm-12, .box .col-xs-12 {
+  padding: 20px;
+}
