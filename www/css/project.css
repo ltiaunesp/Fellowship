@@ -9,7 +9,7 @@
     padding: 0px;
   }
   div.user-image {
-    margin: 0px;
+    margin: 5px;
     height: 80px;
     width: 80px;
     background-image: url("http://cdn3.rd.io/user/no-user-image-square.jpg");
@@ -20,6 +20,10 @@
 
   div.card-content {
     border: 1px solid #BCBCBC;
-    margin: 10px;
+    margin: 5px;
+  }
+
+  div.mission-info {
+    background-color: #EEEEEE;
   }
 }
