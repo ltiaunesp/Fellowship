@@ -1,3 +1,10 @@
+@orange: #FF6B3C;
+@dark-teal: #444C58;
+@teal: #26A599
+@light-teal: #A5DAD4;
+@gray: #B4BBC3;
+@light-gray: #F2F4F5;
+
 @media all and (min-width: 768px) {
   .nav .fa {
     display: none;
