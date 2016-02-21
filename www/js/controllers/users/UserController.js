@@ -1,5 +1,5 @@
 angular.module('fellowship.controllers')
-  .controller('UserController', function($scope, $location, UserService) {
+  .controller('UserController', function($scope, UserService) {
 
     // Get quest information
     $scope.getUserInfo = function() {
