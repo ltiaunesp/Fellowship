@@ -50,7 +50,7 @@
 
 
     <!-- BASE MODULE -->
-    <script src="js/modules/modules.js" charset="utf-8"></script>
+    <!-- <script src="js/modules/modules.js" charset="utf-8"></script> -->
 
   <!-- CONTROLLERS -->
     <script src="js/controllers/controllers.js" charset="utf-8"></script>
@@ -90,15 +90,20 @@
     <div class="container">
       <div class="row" id="center">
         <div class="col-lg-10 col-md-10 col-sm-10">
-            <br><h1>Project Name</h1>
-            <p class="text-justify">
+            <br><span class="hide-on-edit"><h1>The Return of the King</h1></span>
+            <h1><input type="text" class="show-on-edit" value="The Return of the King"></input></h1>
+            <span class="hide-on-edit"><p class="text-justify">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat risus felis, sed pellentesque tellus dapibus eu. Nulla sed dolor posuere, aliquam turpis id, tincidunt orci. Phasellus metus nunc, porta ut faucibus sit amet, maximus in est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris et elit sed nisi sollicitudin eleifend nec ut purus. Sed molestie augue sed mollis imperdiet. Curabitur sit amet ipsum in velit consequat blandit. Ut sollicitudin sem porta libero aliquam, et volutpat est scelerisque. Nulla imperdiet hendrerit risus, id porta purus gravida et. Nunc mi ante, ultricies sit amet varius a, euismod nec erat. Fusce nunc erat, vulputate ut ultricies ut, mollis ac tellus.
-            </p>
-            <h4><span class="glyphicon glyphicon-calendar"></span> Start Date: mm/dd/yyyy</h4>
-            <h4><span class="glyphicon glyphicon-calendar"></span> Due Date: mm/dd/yyyy</h4>
+            </p></span><br>
+            <textarea class="text-justify show-on-edit" cols="130" rows="7">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat risus felis, sed pellentesque tellus dapibus eu. Nulla sed dolor posuere, aliquam turpis id, tincidunt orci. Phasellus metus nunc, porta ut faucibus sit amet, maximus in est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris et elit sed nisi sollicitudin eleifend nec ut purus. Sed molestie augue sed mollis imperdiet. Curabitur sit amet ipsum in velit consequat blandit. Ut sollicitudin sem porta libero aliquam, et volutpat est scelerisque. Nulla imperdiet hendrerit risus, id porta purus gravida et. Nunc mi ante, ultricies sit amet varius a, euismod nec erat. Fusce nunc erat, vulputate ut ultricies ut, mollis ac tellus.
+            </textarea>
+            <h4><span class="glyphicon glyphicon-calendar"></span> Start Date: <span class="hide-on-edit">mm/dd/yyyy</span><input type="date" class="show-on-edit" value="mm/dd/yyyy"></input></h4>
+            <h4><span class="glyphicon glyphicon-calendar"></span> Due Date: <span class="hide-on-edit">mm/dd/yyyy</span><input type="date" class="show-on-edit" value="mm/dd/yyyy"></input></h4>
         </div>
         <div class="col-lg-2 col-md-2 col-sm-2">
-          <button type="button" name="button" class="btn btn-default btn-md pull-right"><a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a></button>
+          <button type="button" name="button" class="btn btn-default btn-md pull-right show-click hide-on-edit"><a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a></button>
+          <button type="button" name="button" class="btn btn-default btn-md pull-right hide-click show-on-edit"><a href="#"><span class="glyphicon glyphicon-edit"></span> Save</a></button>
         </div>
       </div>
 
@@ -294,7 +299,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <br><h1>Team</h1>
+          <br><h1>Crew</h1>
         </div>
       </div>
       <div class="row box">
@@ -553,6 +558,19 @@
 
     <script src="js/jquery-2.2.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(".show-click").click(function(){
+            $(".hide-on-edit").hide();
+            $(".show-on-edit").show();
+        });
+        $(".hide-click").click(function(){
+            $(".show-on-edit").hide();
+            $(".hide-on-edit").show();
+        });
+      });;
+    </script>
 
   </body>
 </html>
