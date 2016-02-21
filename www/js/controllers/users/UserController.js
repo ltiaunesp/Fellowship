@@ -22,11 +22,6 @@ angular.module('fellowship.controllers')
       });
     };
 
-    // Logging out the user
-    $scope.logout = function() {
-      console.log('LOGGING OUT');
-    }
-
     // User registration
     $scope.register = function() {
       // Taking the account information
