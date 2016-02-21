@@ -99,29 +99,43 @@
       </div>
       <div class="row box">
         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <div class="thumbnail">
-
-          </div>
+          <a href="#">
+            <div class="thumbnail thumb-quest">
+              <h4>Quest Title</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
+              <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
+              <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
+            </div>
+          </a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <div class="thumbnail">
+          <a href="#">
+            <div class="thumbnail thumb-quest">
 
-          </div>
+            </div>
+          </a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <div class="thumbnail">
+          <a href="#">
+            <div class="thumbnail thumb-quest">
 
-          </div>
+            </div>
+          </a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <div class="thumbnail">
+          <a href="#">
+            <div class="thumbnail thumb-quest">
 
-          </div>
+            </div>
+          </a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <div class="thumbnail">
+          <a href="#">
+            <div class="thumbnail thumb-quest">
 
-          </div>
+            </div>
+          </a>
         </div>
       </div>
 
@@ -132,29 +146,44 @@
       </div>
       <div class="row box collapse" id="coll2">
         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <div class="thumbnail">
-
-          </div>
+          <a href="#">
+            <div class="thumbnail">
+              <h4>Project Title</h4>
+              <p>Quests in progress: 5</p>
+              <p>Quests available: 4</p>
+              <br>
+              <p><span class="glyphicon glyphicon-calendar"></span> Start Date: mm/dd/yyyy</p>
+              <p><span class="glyphicon glyphicon-calendar"></span> Due Date: mm/dd/yyyy</p>
+            </div>
+          </a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <div class="thumbnail">
+          <a href="#">
+            <div class="thumbnail">
 
-          </div>
+            </div>
+          </a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <div class="thumbnail">
+          <a href="#">
+            <div class="thumbnail">
 
-          </div>
+            </div>
+          </a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <div class="thumbnail">
+          <a href="#">
+            <div class="thumbnail">
 
-          </div>
+            </div>
+          </a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <div class="thumbnail">
+          <a href="#">
+            <div class="thumbnail">
 
-          </div>
+            </div>
+          </a>
         </div>
       </div>
 
@@ -165,29 +194,43 @@
       </div>
       <div class="row box collapse" id="coll3">
         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <div class="thumbnail">
-
-          </div>
+          <a href="#">
+            <div class="thumbnail">
+              <h4>Project Title</h4>
+              <p>Quests available: 4</p>
+              <br><br>
+              <p><span class="glyphicon glyphicon-calendar"></span> Start Date: mm/dd/yyyy</p>
+              <p><span class="glyphicon glyphicon-calendar"></span> Due Date: mm/dd/yyyy</p>
+            </div>
+          </a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <div class="thumbnail">
+          <a href="#">
+            <div class="thumbnail">
 
-          </div>
+            </div>
+          </a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <div class="thumbnail">
+          <a href="#">
+            <div class="thumbnail">
 
-          </div>
+            </div>
+          </a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <div class="thumbnail">
+          <a href="#">
+            <div class="thumbnail">
 
-          </div>
+            </div>
+          </a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <div class="thumbnail">
+          <a href="#">
+            <div class="thumbnail">
 
-          </div>
+            </div>
+          </a>
         </div>
       </div>
 
@@ -195,6 +238,23 @@
 
     <script src="js/jquery-2.2.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+    function equalHeight(group) {
+      var tallest = 0;
+      group.each(function() {
+          var thisHeight = $(this).height();
+          if(thisHeight > tallest) {
+              tallest = thisHeight;
+          }
+      });
+      group.each(function() { $(this).height(tallest); });
+    }
+
+    $(document).ready(function() {
+      equalHeight($(".thumb-quest"));
+    });
+    </script>
 
   </body>
 </html>

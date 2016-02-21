@@ -5,7 +5,7 @@
 }
 
 .thumbnail {
-  height: 200px;
+  min-height: 190px;
   min-width: 300px;
   margin-bottom: 0px;
 }
@@ -54,4 +54,8 @@ a {
 .new-h1 {
   font-size: 35px;
   padding: 0px;
+}
+
+h4 {
+  font-weight: bold;
 }
