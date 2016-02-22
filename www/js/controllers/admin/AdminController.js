@@ -1,6 +1,25 @@
 angular.module('fellowship.controllers')
   .controller('AdminController', function($scope, UserService) {
-    var verifyLogin = function(){
+
+    $scope.username = "Default Name";
+
+    $scope.curPage = location.pathname.replace("/","");
+    $scope.menuItems = [
+      {
+        "name"    : "Home",
+        "URL"     : "home.html"
+      },
+      {
+        "name" : "Members",
+        "URL"  : "members.html"
+      },
+      {
+        "name" : "Profile",
+        "URL"  : "profile.html"
+      }
+    ];
+
+    var verifyLogin = function() {
       UserService.verifyLogin()
       .then( (result) => {
         // Redirect to our home.html
@@ -11,6 +30,15 @@ angular.module('fellowship.controllers')
         console.log('Please log in.');
         window.location.href = 'login.html';
       });
+
+      var getName = function() {
+        UserService.getCurrentProfile()
+        .then( (result) => {
+          $scope.username = result.name;
+        }, (data, status) => {
+          $scope.username = "Default Name";
+        });
+      }
 
     }
   });
