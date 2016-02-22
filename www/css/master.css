@@ -17,6 +17,11 @@
     src: url(../fonts/Caviar_Dreams_Bold.ttf);
 }
 
+@font-face {
+    font-family: "Arial-Unicode";
+    src: url(../fonts/ARIALUNI.TTF);
+}
+
 @media all and (min-width: 768px) {
 
   a, a:hover, a:active, a:visited {
@@ -24,7 +29,7 @@
   }
 
   body, p, li, ul, span {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "Arial-Unicode", Helvetica, Arial, sans-serif;
   }
 
   span.new-h1, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -37,6 +42,9 @@
     color: #F2F4F5;
   }
 
+  button#button-strong a,
+  button#button-strong a:active,
+  button#button-strong a:visited,
   button#button-strong span a,
   button#button-strong span a:active,
   button#button-strong span a:visited {
@@ -44,8 +52,10 @@
     color: #F2F4F5;
     text-decoration: none;
   }
+
   button#button-strong:hover,
-  button#button-strong span a:hover{
+  button#button-strong a:hover,
+  button#button-strong span a:hover {
     background-color: #218A80;
     color: #F2F4F5;
     text-decoration: none;
