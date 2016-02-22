@@ -1,6 +1,6 @@
 angular.module('fellowship.controllers')
   .controller('AdminController', function($scope, UserService) {
-
+    // CONTROLLER FOR NAVBAR
     $scope.username = "Default Name";
 
     $scope.curPage = location.pathname.replace("/","");
@@ -39,6 +39,11 @@ angular.module('fellowship.controllers')
           $scope.username = "Default Name";
         });
       }
+
+      $scope.logout = function(){
+        UserService.logout();
+        window.location.href="index.html";
+      };
 
     }
   });

@@ -87,11 +87,25 @@
       </div>
     </nav>
 
-    <div class="container" ng-controller="ProfileController">
+    <div class="container" ng-controller="ProfileController" ng-init="listUsers()">
       <div class="row">
         <div class="col-lg-12">
           <h1>MEMBERS LIST</h1>
           <div class="box row">
+
+            <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12" ng-repeat="user in users">
+              <div class="card-content row">
+                <div class="no-padding col-lg-1 col-md-1 col-sm-2 col-xs-3">
+                  <!-- Image -->
+                  <div class="user-image"></div>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-9">
+                  <h4 class="card-title">{{user.firstName}} {{user.lastName}}</h4>
+                  <h6 class="card-subtitle text-muted">{{user.occupation}}</h6>
+                  <a href="profile.html?id={{user.id}}" class="card-link">View Profile</a>
+                </div>
+              </div>
+            </div>
 
             <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12">
               <div class="card-content row">
