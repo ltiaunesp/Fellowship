@@ -149,7 +149,7 @@
               </div>
 
               <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="card-content row">
+                <div class="card-content row quest-card">
                   <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 quest-hide-on-edit">
                     <h4 class="card-title">Quest Title</h4>
                     <h6 class="card-subtitle text-muted">mm/dd/yyyy</h6>
@@ -157,7 +157,7 @@
                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 quest-show-on-edit">
                     <h4 class="card-title"><input type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" value="Quest Title"></input></h4>
 
-                    <h6><input type="date" class="qcol-lg-12 col-md-12 col-sm-12 col-xs-12" value="mm/dd/yyyy"></input></h6>
+                    <h6><input type="date" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" value="mm/dd/yyyy"></input></h6>
                   </div>
                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <span class="quest-hide-on-edit"><button class="btn btn-default btn-md pull-right" data-toggle="collapse" href="#collapseQuest1" aria-expanded="true" aria-controls="collapseQuest1"><a href="#"><a href="#"><span class="glyphicon glyphicon-resize-full"></span></a></a></button></span>
@@ -209,6 +209,69 @@
                   </div>
                 </div>
               </div>
+
+              <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="card-content row quest-card">
+                  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 quest-hide-on-edit">
+                    <h4 class="card-title">Quest Title 2</h4>
+                    <h6 class="card-subtitle text-muted">mm/dd/yyyy</h6>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 quest-show-on-edit">
+                    <h4 class="card-title"><input type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" value="Quest Title"></input></h4>
+
+                    <h6><input type="date" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" value="mm/dd/yyyy"></input></h6>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <span class="quest-hide-on-edit"><button class="btn btn-default btn-md pull-right" data-toggle="collapse" href="#collapseQuest2" aria-expanded="true" aria-controls="collapseQuest2"><a href="#"><a href="#"><span class="glyphicon glyphicon-resize-full"></span></a></a></button></span>
+                  </div>
+                  <!-- CUIDADO COM A ID DESSE AQUI (ela também aparece logo em cima)!!!! O collapseQuest1 de baixo é o que vai ser escondido no collapse, e logo aqui em cima no botão é onde eu referencio o que será colapsado quando eu clicar nele -->
+                  <div class="collapse" id="collapseQuest2">
+
+                    <div class="quest-hide-on-edit col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
+                      <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
+                    </div>
+
+                    <div class="quest-show-on-edit col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <h4>Add New Skill</h4>
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <input type="text" class="form-control" id="skill-title" placeholder="SKILL">
+                      </div>
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <input type="text" class="form-control" id="skill-exp" placeholder="+10xp">                        </div>
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <button class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> Add New Skill</button>
+                      </div>
+                      <h4>Skill List</h4>
+                      <ul class="list-unstyled row">
+                        <li><span class="label label-default">JavaScript</span> <span class="label label-default">+20 xp</span>  <button class="btn btn-default"><span class="glyphicon glyphicon-trash"></span> Delete Skill</button></li>
+                        <li><span class="label label-default">JavaScript</span> <span class="label label-default">+20 xp</span>  <button class="btn btn-default"><span class="glyphicon glyphicon-trash"></span> Delete Skill</button></li>
+                      </ul>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 quest-hide-on-edit">
+                      <h6 class="card-subtitle text-muted">FName LName</h6>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 quest-show-on-edit">
+                      <h4>Person Assigned</h4>
+                      <h6><input type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" value="FName LName"></input></h6>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <h6 class="card-subtitle text-muted">DESCRIPTION</h6>
+                      <span class="quest-hide-on-edit"><p class="text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat quam non felis pulvinar, id consectetur augue efficitur. Aliquam eget cursus nisi. Mauris fringilla suscipit nisl, iaculis euismod diam sodales aliquet. Cras semper sagittis lorem eu molestie.
+                      </p></span>
+                      <textarea class="text-justify quest-show-on-edit col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat quam non felis pulvinar, id consectetur augue efficitur. Aliquam eget cursus nisi. Mauris fringilla suscipit nisl, iaculis euismod diam sodales aliquet. Cras semper sagittis lorem eu molestie.
+                      </textarea>
+                    </div>
+                    <div class="col-lg-12">
+                      <button type="button" name="button" class="btn btn-default btn-md pull-right quest-show-click quest-hide-on-edit col-lg-12 col-md-12 col-sm-12 col-xs-12"><a href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a></button>
+                      <button type="button" name="button" class="btn btn-default btn-md pull-right quest-hide-click quest-show-on-edit col-lg-12 col-md-12 col-sm-12 col-xs-12"><a href="#"><span class="glyphicon glyphicon-edit"></span> Save</a></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
 
@@ -496,8 +559,8 @@
             $(".miss-hide-on-edit").show();
         });
         $(".quest-show-click").click(function(){
-            $(".quest-hide-on-edit").hide();
-            $(".quest-show-on-edit").show();
+            $(this).closest(".quest-card").find(".quest-hide-on-edit").hide();
+            $(this).closest(".quest-card").find(".quest-show-on-edit").show();
         });
         $(".quest-hide-click").click(function(){
             $(".quest-show-on-edit").hide();
