@@ -39,7 +39,7 @@ angular.module('fellowship.modules.projects.services')
               deferred.reject("error-user-not-logged-in");
             parameters.user = id;
             ApiService.performCall("projects", "create", parameters)
-              .then(
+              .then( // RETORNA A ID DO NOVO PROJETO ;)
                 (result) => {
                   deferred.resolve(result);
                 },
@@ -148,7 +148,7 @@ angular.module('fellowship.modules.projects.services')
             ApiService.performCall("projects", "newslot", parameters)
               .then(
                 (result) => {
-                  deferred.resolve(result);
+                  deferred.resolve(result); // return the slot id
                 },
                 (data, status) => {
                   deferred.reject("error-cant-add-slot--"+status)
