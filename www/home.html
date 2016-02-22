@@ -54,7 +54,7 @@
 
   <!-- CONTROLLERS -->
     <script src="js/controllers/controllers.js" charset="utf-8"></script>
-    <script src="js/controllers/users/UserController.js" charset="utf-8"></script>
+    <script src="js/controllers/profiles/ProfileController.js" charset="utf-8"></script>
 
     <!-- APP -->
     <script src="js/app.js" charset="utf-8"></script>
@@ -62,7 +62,7 @@
   </head>
   <body ng-app="fellowship" ng-controller="AppController" ng-init="redirectIfNotLoggedIn()">
 
-    <nav class="navbar navbar-default" ng-controller="UserController">
+    <nav class="navbar navbar-default" ng-controller="ProfileController">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-1" aria-expanded="false">
@@ -81,7 +81,7 @@
             <li><a href="profile.html"><i class="fa fa-user"></i> Profile</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a>Welcome {{userName}}</a></li>
+            <li><a>Welcome {{user.name}}</a></li>
             <li><a ng-click="logout()" href="#"><i class="fa fa-sign-out"></i>Log Out</a></li>
           </ul>
         </div>
