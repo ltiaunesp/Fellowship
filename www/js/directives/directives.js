@@ -1,7 +1,7 @@
-angular.module('fellowship.directives')
+angular.module('fellowship.directives', [])
   .directive("fellow-project", function(){
     return {
       restrict    : 'E',
-      templateUrl : 'views/projectBlock.html'
+      templateUrl : '/views/projectBlock.html'
     }
   })  //

@@ -32,7 +32,6 @@ angular.module('fellowship.modules.slots.services')
               }, (data,status) => {
                 deferred.reject('error-do-remove-slot-' + status);
               })
-            }
           }else
             deferred.reject("error-user-not-logged")
         }, (data, status) => {
@@ -84,13 +83,13 @@ angular.module('fellowship.modules.slots.services')
               }, (data,status) => {
                 deferred.reject('error-do-set-skills-' + status);
               })
-            }
           }else
             deferred.reject("error-user-not-logged")
         }, (data, status) => {
           deferred.reject('error-cant-verify-login');
         });
       return deferred.promise;
+    }
 
 
 

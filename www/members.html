@@ -54,7 +54,8 @@
 
   <!-- CONTROLLERS -->
     <script src="js/controllers/controllers.js" charset="utf-10"></script>
-    <script src="js/controllers/profiles/ProfileController.js" charset="utf-8"></script>
+    <script src="js/controllers/members/MembersController.js" charset="utf-8"></script>
+    <script src="js/controllers/members/MemberController.js" charset="utf-8"></script>
 
     <!-- APP -->
     <script src="js/app.js" charset="utf-10"></script>
@@ -87,92 +88,22 @@
       </div>
     </nav>
 
-    <div class="container" ng-controller="ProfileController" ng-init="listUsers()">
+    <div class="container" ng-controller="MembersController" ng-init="listUsers()">
       <div class="row">
         <div class="col-lg-12">
           <h1>MEMBERS LIST</h1>
           <div class="box row">
 
-            <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12" ng-repeat="user in users">
+            <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12" ng-controller="MemberController" ng-repeat="id in members.ids">
               <div class="card-content row">
                 <div class="no-padding col-lg-1 col-md-1 col-sm-2 col-xs-3">
                   <!-- Image -->
                   <div class="user-image"></div>
                 </div>
                 <div class="col-lg-10 col-md-10 col-sm-10 col-xs-9">
-                  <h4 class="card-title">{{user.firstName}} {{user.lastName}}</h4>
-                  <h6 class="card-subtitle text-muted">{{user.occupation}}</h6>
-                  <a href="profile.html?id={{user.id}}" class="card-link">View Profile</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <div class="card-content row">
-                <div class="no-padding col-lg-1 col-md-1 col-sm-2 col-xs-3">
-                  <!-- Image -->
-                  <div class="user-image"></div>
-                </div>
-                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-9">
-                  <h4 class="card-title">FName LName</h4>
-                  <h6 class="card-subtitle text-muted">Occupation</h6>
-                  <a href="#" class="card-link">View Profile</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <div class="card-content row">
-                <div class="no-padding col-lg-1 col-md-1 col-sm-2 col-xs-3">
-                  <!-- Image -->
-                  <div class="user-image"></div>
-                </div>
-                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-9">
-                  <h4 class="card-title">FName LName</h4>
-                  <h6 class="card-subtitle text-muted">Occupation</h6>
-                  <a href="#" class="card-link">View Profile</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <div class="card-content row">
-                <div class="no-padding col-lg-1 col-md-1 col-sm-2 col-xs-3">
-                  <!-- Image -->
-                  <div class="user-image"></div>
-                </div>
-                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-9">
-                  <h4 class="card-title">FName LName</h4>
-                  <h6 class="card-subtitle text-muted">Occupation</h6>
-                  <a href="#" class="card-link">View Profile</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <div class="card-content row">
-                <div class="no-padding col-lg-1 col-md-1 col-sm-2 col-xs-3">
-                  <!-- Image -->
-                  <div class="user-image"></div>
-                </div>
-                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-9">
-                  <h4 class="card-title">FName LName</h4>
-                  <h6 class="card-subtitle text-muted">Occupation</h6>
-                  <a href="#" class="card-link">View Profile</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="card col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <div class="card-content row">
-                <div class="no-padding col-lg-1 col-md-1 col-sm-2 col-xs-3">
-                  <!-- Image -->
-                  <div class="user-image"></div>
-                </div>
-                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-9">
-                  <h4 class="card-title">FName LName</h4>
-                  <h6 class="card-subtitle text-muted">Occupation</h6>
-                  <a href="#" class="card-link">View Profile</a>
+                  <h4 class="card-title">{{member.name}}</h4>
+                  <h6 class="card-subtitle text-muted">{{member.occupation}}</h6>
+                  <a href="profile.html?id={{member.id}}" class="card-link">View Profile</a>
                 </div>
               </div>
             </div>

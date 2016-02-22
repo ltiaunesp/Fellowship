@@ -137,7 +137,7 @@ angular.module('fellowship.modules.projects.services')
     service.createSlot = function(projectId){
       var deferred = $q.defer();
       var parameters = {
-        projectid = projectId
+        projectid : projectId
       };
       UserService.verifyLogin()
         .then(
@@ -164,7 +164,7 @@ angular.module('fellowship.modules.projects.services')
     service.addMission = function(projectId){
       var deferred = $q.defer();
       var parameters = {
-        projectid = projectId
+        projectid : projectId
       };
       UserService.verifyLogin()
         .then(
@@ -191,7 +191,7 @@ angular.module('fellowship.modules.projects.services')
     service.removeMission = function(projectId){
       var deferred = $q.defer();
       var parameters = {
-        projectid = projectId
+        projectid : projectId
       };
       UserService.verifyLogin()
         .then(
@@ -218,7 +218,7 @@ angular.module('fellowship.modules.projects.services')
     service.listMissions = function(projectId){
       var deferred = $q.defer();
       var parameters = {
-        projectid = projectId
+        projectid : projectId
       };
       ApiService.performCall("projects", "listmission", parameters)
         .then(

@@ -1,6 +1,23 @@
 angular.module('fellowship.controllers')
   .controller('QuestController', function ($scope, QuestService) {
 
+    $scope.quest = {
+      id          : 1,
+      title       : "Just go",
+      description : "There and back again",
+      deadline    : "12/34/2013",
+      skills      : [{
+          "name"  : "run",
+          "value" : "+9000"
+        },
+        {
+          "name"  : "track",
+          "value" : "42" // It's all 42 ;)
+        }
+      ],
+      person      : "Hobbits"
+    }
+
     // Get quest information
     $scope.getQuest = function() {
       console.log('GET QUEST FUNCTION CALLED');

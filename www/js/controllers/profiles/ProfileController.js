@@ -2,9 +2,9 @@ angular.module('fellowship.controllers')
   .controller('ProfileController', function ($scope, ProfileService) {
 
     $scope.user = {
-        "firstName"  : "Default",
-        "lastName"   : "Name",
-        "occupation" : "Programmer",
+        "name"       : "Samwise Gamgee",
+        "username"   : "sam",
+        "occupation" : "Chief Officer",
         "id"         : 1,
         "projectIds"  : [1],
         "skillId"    : [1, 2]
@@ -61,5 +61,4 @@ angular.module('fellowship.controllers')
         console.log('fail' + status);
       });
     }
-
   })

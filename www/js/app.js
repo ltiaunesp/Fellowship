@@ -1,1 +1,1 @@
-angular.module('fellowship', ['fellowship.controllers', 'fellowship.directives' ]);
+angular.module('fellowship', ['fellowship.controllers']);
