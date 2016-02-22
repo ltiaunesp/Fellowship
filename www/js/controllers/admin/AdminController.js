@@ -1,5 +1,21 @@
 angular.module('fellowship.controllers')
   .controller('AdminController', function($scope, UserService) {
+
+    $scope.menuItems = [
+      {
+        "name" : "Home",
+        "URL"  : "home.html"
+      },
+      {
+        "name" : "Members",
+        "URL"  : "members.html"
+      },
+      {
+        "name" : "Profile",
+        "URL"  : "profile.html"
+      }
+    ]
+
     var verifyLogin = function(){
       UserService.verifyLogin()
       .then( (result) => {
