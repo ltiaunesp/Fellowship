@@ -83,6 +83,9 @@ The reward system was created using Gamification concepts to quantify the abilit
 The Skill Level system encourages people to be more productive, because they will be motivated to improve their Skill Levels to be able to join projects that demand a higher level of skills.
 As a suggestion, the Skill Level of a new crew member can be set based on the captain’s or chief officer’s previous experiences.
 
+### To do
+
+We chose not to link the web app with the API server due to the lack of time. We preferred to leave some static content to demonstrate our project idea and usability. Hope you enjoy it!  
 
 ## About Project Team
 

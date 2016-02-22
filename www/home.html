@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/home.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/master.css" media="screen" title="no title" charset="utf-8">
 
     <!--  ANGULAR -->
     <script src="js/angular.min.js" charset="utf-8"></script>
@@ -53,6 +54,7 @@
 
   <!-- CONTROLLERS -->
     <script src="js/controllers/controllers.js" charset="utf-8"></script>
+    <script src="js/controllers/admin/AdminController.js" charset="utf-8"></script>
 
     <!-- APP -->
     <script src="js/app.js" charset="utf-8"></script>
@@ -60,7 +62,7 @@
   </head>
   <body ng-app="fellowship" ng-controller="AppController" ng-init="redirectIfNotLoggedIn()">
 
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" ng-controller="AdminController">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-1" aria-expanded="false">
@@ -69,17 +71,21 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Fellowship</a>
+          <span class="navbar-brand">Fellowship</span>
         </div>
 
         <div class="collapse navbar-collapse" id="collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#"><i class="fa fa-home"></i> Home</a></li>
-            <li><a href="#"><i class="fa fa-users"></i> Members</a></li>
-            <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+            <li class="{{menuItem.URL == curPage ? 'active' : ''}}" ng-repeat="menuItem in menuItems">
+              <a ng-href="{{menuItem.URL}}"><i class="fa fa-users"></i> {{menuItem.name}}</a>
+            </li>
+            <!-- <li class="active"><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="members.html"><i class="fa fa-users"></i> Members</a></li>
+            <li><a href="profile.html"><i class="fa fa-user"></i> Profile</a></li> -->
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a ng-click="logout()" href="#"><i class="fa fa-sign-out"></i> Log Out</a></li>
+            <li><a>Welcome, {{username}}</a></li>
+            <li><a ng-click="logout()" href="#"><i class="fa fa-sign-out"></i>Log Out</a></li>
           </ul>
         </div>
       </div>
@@ -89,62 +95,16 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <button type="button" name="button" class="btn btn-default btn-lg pull-right"><span class="new-h3"><a href="#"><i class="fa fa-plus-square "></i> Create new project</a><span></button>
+          <button type="button" id="button-strong" name="button" class="btn btn-default btn-lg pull-right"><span class="new-h3"><a href="#"><i class="fa fa-plus-square "></i> Create new project</a><span></button>
         </div>
       </div>
+
       <div class="row">
         <div class="col-lg-12">
-          <span class="new-h1">My Quests</span>
+          <span class="new-h1">My Projects</span>
         </div>
       </div>
       <div class="row box">
-        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <a href="#">
-            <div class="thumbnail thumb-quest">
-              <h4>Quest Title</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-              <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-              <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <a href="#">
-            <div class="thumbnail thumb-quest">
-
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <a href="#">
-            <div class="thumbnail thumb-quest">
-
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <a href="#">
-            <div class="thumbnail thumb-quest">
-
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <a href="#">
-            <div class="thumbnail thumb-quest">
-
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-12">
-          <span class="new-h2"><button class="btn btn-default btn-lg" data-toggle="collapse" data-target="#coll2">My Projects <i class="fa fa-caret-down pull-right"></i></button></span>
-        </div>
-      </div>
-      <div class="row box collapse" id="coll2">
         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
           <a href="#">
             <div class="thumbnail">
@@ -189,10 +149,36 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <span class="new-h2"><button class="btn btn-default btn-lg" data-toggle="collapse" data-target="#coll3">Open Projects <i class="fa fa-caret-down pull-right"></i></button></span>
+          <span class="new-h1">My Quests</span>
         </div>
       </div>
-      <div class="row box collapse" id="coll3">
+      <div class="row box">
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+          <a href="#">
+            <div class="thumbnail thumb-quest">
+              <h4>Quest Title</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
+              <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
+              <h6 class="card-subtitle text-muted">SKILL +10xp</h6>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+          <a href="#">
+            <div class="thumbnail thumb-quest">
+
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <span class="new-h1">Open Projects</span>
+        </div>
+      </div>
+      <div class="row box">
         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
           <a href="#">
             <div class="thumbnail">
@@ -201,27 +187,6 @@
               <br><br>
               <p><span class="glyphicon glyphicon-calendar"></span> Start Date: mm/dd/yyyy</p>
               <p><span class="glyphicon glyphicon-calendar"></span> Due Date: mm/dd/yyyy</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <a href="#">
-            <div class="thumbnail">
-
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <a href="#">
-            <div class="thumbnail">
-
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <a href="#">
-            <div class="thumbnail">
-
             </div>
           </a>
         </div>

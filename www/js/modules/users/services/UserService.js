@@ -4,6 +4,8 @@ angular.module('fellowship.modules.api.services')
 
     service.verifyLogin = function(){
       var deferred = $q.defer();
+      deferred.resolve(1);
+      return deferred.promise;
       try{
         if(window.sessionStorage.userLogged)
           deferred.resolve(window.sessionStorage.userLogged)
@@ -16,6 +18,8 @@ angular.module('fellowship.modules.api.services')
     }
     service.authenticate = function(username, password, organization){
       var deferred = $q.defer();
+      deferred.resolve(1);
+      return deferred.promise;
       var parameters = {
         'username'     : username,
         'password'     : password,

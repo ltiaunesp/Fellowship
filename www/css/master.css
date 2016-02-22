@@ -1,5 +1,230 @@
+/*
+    Website Color Pallet
+
+    orange: #FF6B3C;
+    teal: #26A599;
+    lightTeal: #A5DAD4;
+    darkGray: #444C58;
+    gray: #B4BBC3;
+    lightGray: #F2F4F5;
+*/
+
+@font-face {
+    font-family: "Exo-Regular";
+    src: url(../fonts/Exo-Regular.otf);
+}
+@font-face {
+    font-family: "Caviar_Dreams_Bold";
+    src: url(../fonts/Caviar_Dreams_Bold.ttf);
+}
+
+@font-face {
+    font-family: "Arial-Unicode";
+    src: url(../fonts/ARIALUNI.TTF);
+}
+
+textarea {
+   resize: none;
+}
+
+#orange {
+  color: #FF6B3C;
+}
+
 @media all and (min-width: 768px) {
+
+  a, a:hover, a:active, a:visited {
+    text-decoration: none;
+  }
+
+  body, p, li, ul, span {
+    font-family: "Arial-Unicode", Helvetica, Arial, sans-serif;
+    color: #444C58;
+  }
+
+  span.new-h1, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Caviar_Dreams_Bold", Helvetica, Arial, sans-serif;
+    color: #444C58;
+  }
+
+  /*Button style*/
+  a#button-strong {
+    background-color: #26A599;
+    color: #F2F4F5;
+  }
+
+  a#button-strong,
+  a#button-strong:active,
+  a#button-strong:visited {
+    background-color: #26A599;
+    color: #F2F4F5;
+    text-decoration: none;
+  }
+
+  a#button-strong:hover,
+  a#button-strong a:hover,
+  a#button-strong span a:hover {
+    background-color: #218A80;
+    color: #F2F4F5;
+    text-decoration: none;
+  }
+  /**/
+  button#button-strong {
+    background-color: #26A599;
+    color: #F2F4F5;
+  }
+
+  button#button-strong a,
+  button#button-strong a:active,
+  button#button-strong a:visited,
+  button#button-strong span a,
+  button#button-strong span a:active,
+  button#button-strong span a:visited {
+    background-color: transparent;
+    color: #F2F4F5;
+    text-decoration: none;
+  }
+
+  button#button-strong:hover,
+  button#button-strong a:hover,
+  button#button-strong span a:hover {
+    background-color: #218A80;
+    color: #F2F4F5;
+    text-decoration: none;
+  }
+
+  /* Menu -------------------------------------*/
   .nav .fa {
     display: none;
+  }
+
+  nav.navbar, nav.bar div.container-fluid {
+    background-color: #444C58;
+    color: #F2F4F5;
+  }
+
+  /*Menu buttons style*/
+  div.navbar-header a.navbar-brand,
+  div.navbar-header span.navbar-brand,
+  div.navbar-header span.navbar-brand:hover,
+  div.navbar-header a.navbar-brand:hover,
+  div.navbar-header a.navbar-brand:active,
+  div.navbar-header a.navbar-brand:disabled {
+    background-color: #26A599;
+    color: #F2F4F5;
+  }
+
+  div.navbar-collapse ul.navbar-nav li a,
+  div.navbar-collapse ul.navbar-nav li.active,
+  div.navbar-collapse ul.navbar-nav li a:active,
+  div.navbar-collapse ul.navbar-nav li a:disabled{
+    background-color: #444C58;
+    color: #F2F4F5;
+  }
+
+  div.navbar-collapse ul.navbar-nav li a:hover{
+    color: #26A599;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /*Button*/
+
+    /*Button style*/
+    a#button-strong {
+      background-color: #26A599;
+      color: #F2F4F5;
+    }
+
+    a#button-strong,
+    a#button-strong:active,
+    a#button-strong:visited {
+      background-color: #26A599;
+      color: #F2F4F5;
+      text-decoration: none;
+    }
+
+    a#button-strong:hover,
+    a#button-strong a:hover,
+    a#button-strong span a:hover {
+      background-color: #218A80;
+      color: #F2F4F5;
+      text-decoration: none;
+    }
+    /**/
+    button#button-strong {
+      background-color: #26A599;
+      color: #F2F4F5;
+    }
+
+    button#button-strong a,
+    button#button-strong a:active,
+    button#button-strong a:visited,
+    button#button-strong span a,
+    button#button-strong span a:active,
+    button#button-strong span a:visited {
+      background-color: transparent;
+      color: #F2F4F5;
+      text-decoration: none;
+    }
+
+    button#button-strong:hover,
+    button#button-strong a:hover,
+    button#button-strong span a:hover {
+      background-color: #218A80;
+      color: #F2F4F5;
+      text-decoration: none;
+    }
+
+  /*Menu*/
+  nav.navbar, nav.bar div.container-fluid {
+    background-color: #444C58;
+    color: #F2F4F5;
+  }
+
+  /*Menu buttons style*/
+  div.navbar-header a.navbar-brand,
+  div.navbar-header span.navbar-brand,
+  div.navbar-header span.navbar-brand:hover,
+  div.navbar-header a.navbar-brand:hover,
+  div.navbar-header a.navbar-brand:active,
+  div.navbar-header a.navbar-brand:disabled {
+    background-color: #26A599;
+    color: #F2F4F5;
+  }
+  div.navbar-header a.navbar-brand:hover,
+  div.navbar-header a.navbar-brand:active,
+  div.navbar-header a.navbar-brand:disabled {
+    background-color: #26A599;
+    color: #F2F4F5;
+  }
+  div.navbar-header button.navbar-toggle,
+  div.navbar-header button.navbar-toggle:hover,
+  div.navbar-header button.navbar-toggle:active,
+  div.navbar-header button.navbar-toggle:disabled,
+  div.navbar-header button.navbar-toggle:enabled {
+    background-color: #444C58;
+    color: #F2F4F5;
+    border: none;
+  }
+  div.navbar-header button.navbar-toggle span.icon-bar,
+  div.navbar-header button.navbar-toggle span.icon-bar:hover,
+  div.navbar-header button.navbar-toggle span.icon-bar:active,
+  div.navbar-header button.navbar-toggle span.icon-bar:disabled,
+  div.navbar-header button.navbar-toggle span.icon-bar:enabled {
+    background-color: #F2F4F5;
+  }
+
+  div.navbar-collapse ul.navbar-nav li a,
+  div.navbar-collapse ul.navbar-nav li.active,
+  div.navbar-collapse ul.navbar-nav li a:active,
+  div.navbar-collapse ul.navbar-nav li a:disabled{
+    background-color: #444C58;
+    color: #F2F4F5;
+  }
+
+  div.navbar-collapse ul.navbar-nav li a:hover{
+    color: #26A599;
   }
 }

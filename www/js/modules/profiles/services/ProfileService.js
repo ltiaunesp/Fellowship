@@ -27,6 +27,7 @@ angular.module('fellowship.modules.profiles.services')
         }, (data, status) => {
           deferred.reject('error-fail-to-get-all-members--'+status);
         })
+      return deferred.promise;
     }
 
     service.getCurrentProfile = function(){

@@ -69,17 +69,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Fellowship</a>
+          <a class="navbar-brand" href="home.html">Fellowship</a>
         </div>
 
         <div class="collapse navbar-collapse" id="collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-            <li><a href="#"><i class="fa fa-users"></i> Members</a></li>
-            <li class="active"><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+            <li><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="members.html"><i class="fa fa-users"></i> Members</a></li>
+            <li class="active"><a href="profile.html"><i class="fa fa-user"></i> Profile</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><i class="fa fa-sign-out"></i> Log Out</a></li>
+            <li><a ng-click="logout()" href="#"><i class="fa fa-sign-out"></i> Log Out</a></li>
           </ul>
         </div>
       </div>
@@ -122,36 +122,11 @@
             <div class="row">
               <div class="form-group form-group-lg">
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-                  <label for="user-username" class="control-label">Username</label>
-                </div>
-
-                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-                  <input type="text" class="form-control" id="user-username" placeholder="Username">
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="form-group form-group-lg">
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                   <label for="user-occupation" class="control-label">Occupation</label>
                 </div>
 
                 <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
                   <input type="text" class="form-control" id="user-occupation" placeholder="Occupation">
-                </div>
-              </div>
-            </div>
-
-
-            <div class="row">
-              <div class="form-group form-group-lg">
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-                  <label for="user-picture" class="control-label">Change Image</label>
-                </div>
-                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-                  <img class="img-circle" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/AWS_Simple_Icons_Non-Service_Specific_User.svg/2000px-AWS_Simple_Icons_Non-Service_Specific_User.svg.png" height="120px" width="120px" />
-                  <input type="file" id="user-picture">
                 </div>
               </div>
             </div>
