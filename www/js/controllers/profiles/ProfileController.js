@@ -1,6 +1,8 @@
 angular.module('fellowship.controllers')
   .controller('ProfileController', function ($scope, ProfileService) {
 
+    $scope.user = {"name" : "Defalt Name"};
+
     // List users
     $scope.listUsers = function() {
       console.log('listUsers function');
@@ -31,6 +33,7 @@ angular.module('fellowship.controllers')
       ProfileService.getCurrentProfile()
       .then( (result) => { // Success
         console.log(result);
+        //$scope.user = result.name;
       }, (data, status) => { // Error
         console.log('fail' + status);
       });
