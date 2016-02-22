@@ -31,7 +31,17 @@
     overflow-y:scroll;
   }
 
-  .show-on-edit {
+  .proj-show-on-edit {
     display: none;
   }
+
+  .miss-show-on-edit {
+    display: none;
+  }
+
+  .quest-show-on-edit {
+    display: none;
+  }
+
+
 }
