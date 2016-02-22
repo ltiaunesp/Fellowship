@@ -8,8 +8,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "2.4.3",
+    "mongodb": ">= 0.9.6-7"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "restify": "^4.0.4",
+    "mongojs": "^2.3.0"
+  },
   "description": ""
 }

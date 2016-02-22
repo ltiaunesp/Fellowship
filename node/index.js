@@ -1,6 +1,4 @@
 var restify    = require('restify');
-var cors       = require('cors');
-var fs         = require('fs');
 
 var modules = {};
 
@@ -16,8 +14,7 @@ var server = restify.createServer();
 server.use(restify.acceptParser(server.acceptable));
 server.use(restify.queryParser());
 server.use(restify.bodyParser());
-server.use(cors());
 for(module in modules){
   server.get("/api/"+module+"/:path", modules[module].listener)
 }
-server.listen(8080);
+server.listen(4000);
