@@ -25,6 +25,7 @@ Lastly, we have a defined group of members, based on a ship hierarchy:
 * **Chief officer:** defines how to get there and who goes on the trip
 * **Crew Members:** without them, our ship wouldn’t set sail
 * **Development process:** even though it is not defined as a structure, it can be seen as our ship: if it sinks, everybody goes down with it.
+
 ##How are all this concepts and definitions put together?  
 Since we are using gamification, we’ll set some rules: 
 * The person who creates a company account will be our Captain - you can have many captains within a company
