@@ -30,4 +30,18 @@
     max-height: 700px;
     overflow-y:scroll;
   }
+
+  .proj-show-on-edit {
+    display: none;
+  }
+
+  .miss-show-on-edit {
+    display: none;
+  }
+
+  .quest-show-on-edit {
+    display: none;
+  }
+
+
 }

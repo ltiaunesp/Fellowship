@@ -23,26 +23,23 @@ label {
 
 @media all and (min-width: 992px) {
   #box1 {
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    border-left: 2px solid black;
+  background-color: #A5DAD4;
     height: 560px;
   }
 
   #box2 {
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    border-right: 2px solid black;
+  background-color: #A5DAD4;
     height: 560px;
   }
 
   #box3 {
     height: 460px;
-    border-left: 2px solid black;
+    border-left: 2px solid #444C58;
+    background-color: #A5DAD4;
     margin-top: 50px;
   }
 
-  #box3 p {
+  div#box3 h3 {
     padding-top: 35%;
   }
 }
