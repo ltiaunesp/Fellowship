@@ -9,9 +9,8 @@
     padding: 0px;
   }
   div.user-image {
-    margin: 0px;
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    /*width: 80px;*/
     background-image: url("http://cdn3.rd.io/user/no-user-image-square.jpg");
     background-position: center;
     background-size: cover;
@@ -20,6 +19,29 @@
 
   div.card-content {
     border: 1px solid #BCBCBC;
-    margin: 10px;
+    margin: 5px;
   }
+
+  div.mission-info {
+    background-color: #EEEEEE;
+  }
+
+  .modal-body {
+    max-height: 700px;
+    overflow-y:scroll;
+  }
+
+  .proj-show-on-edit {
+    display: none;
+  }
+
+  .miss-show-on-edit {
+    display: none;
+  }
+
+  .quest-show-on-edit {
+    display: none;
+  }
+
+
 }

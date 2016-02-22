@@ -17,6 +17,30 @@ angular.module('fellowship.modules.slots.services')
       return deferred.promise;
     }
 
+    service.removeSlot = function(id){
+      var deferred = $q.defer();
+      UserService.verifyLogin()
+        .then((uid) => { // The back-end system will verify if that user have permission to allocate members.
+          if(uid){
+            var parameters = {
+              'id'   : id,
+              'performerId' : uid
+            }
+            Api.performCall('slots','removeslot', parameters)
+              .then((data) => {
+                deferred.resolve(data);
+              }, (data,status) => {
+                deferred.reject('error-do-remove-slot-' + status);
+              })
+          }else
+            deferred.reject("error-user-not-logged")
+        }, (data, status) => {
+          deferred.reject('error-cant-verify-login');
+        });
+      return deferred.promise;
+
+    }
+
     service.getSlotRecomendations = function(id){
       var deferred = $q.defer();
       service.getSlot(id)
@@ -39,22 +63,35 @@ angular.module('fellowship.modules.slots.services')
           deferred.reject('error-cant-get-slot-'+status)
 
         })
-      return deffered.promise;
+      return deferred.promise;
     }
 
     service.setSkills = function(id, skills){
       var deferred = $q.defer();
-      var parameters = {
-        id : id,
-        skills : skills
-      }
-      Api.performCall('slots','setskills', parameters)
-        .then((data) => {
-          deferred.resolve(data);
-        }, (data,status) => {
-          deferred.reject('error-do-set-skills-' + status);
-        })
+      UserService.verifyLogin()
+        .then((uid) => { // The back-end system will verify if that user have permission to allocate members.
+          if(uid){
+            var parameters = {
+              'id'   : id,
+              'userId' : userid,
+              'performerId' : uid,
+              'skills' : skills
+            }
+            Api.performCall('slots','setskills', parameters)
+              .then((data) => {
+                deferred.resolve(data);
+              }, (data,status) => {
+                deferred.reject('error-do-set-skills-' + status);
+              })
+          }else
+            deferred.reject("error-user-not-logged")
+        }, (data, status) => {
+          deferred.reject('error-cant-verify-login');
+        });
+      return deferred.promise;
     }
+
+
 
     service.applySlot = function(id){
       var deferred = $q.defer();

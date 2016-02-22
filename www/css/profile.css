@@ -1,3 +1,30 @@
+h4.padd-left {
+  padding-left: 15px;
+}
+
+div.proj-card:hover {
+  background-color: #B4BBC3;
+}
+
+div.proj-cont {
+  margin-top: 20px;
+}
+
+.progress {
+  background-color: #A5DAD4;
+}
+
+.progress-bar {
+  background-color: #FF6B3C;
+}
+
+a, a:hover, a:active, a:visited {
+  color: #444C58;
+}
+
+hr {
+  color: #26A599;
+}
 @media all and (min-width: 768px) {
   .nav .fa {
     display: none;
@@ -25,28 +52,37 @@
 
 
 a {
-  color: black;
+  color: #444C58;
 }
 
 img {
-  border: 1px solid black;
+  border: 1px solid #444C58;
 }
 
 .box {
-  border: 1px solid black;
-  padding: 20px;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  padding: 0px 20px;
 }
 
-.thumbnail {
-  height: 150px;
+.progress{
+  margin-top: 10px;
+}
+
+.thumb-proj {
+  min-height: 190px;
+  margin-bottom: 0px;
   min-width: 300px;
   margin-bottom: 0px;
 }
 
-.box .col-lg-12 {
-  padding: 20px;
+.thumb-skill {
+  min-height: 110px;
+  margin-bottom: 0px;
+  min-width: 300px;
+  margin-bottom: 0px;
+}
+
+.progress {
+  margin-bottom: 0px;
 }
 
 @media all and (max-width: 768px) {
@@ -57,14 +93,4 @@ img {
   #center {
     text-align: center;
   }
-}
-
-.thumbnail {
-  min-height: 190px;
-  min-width: 300px;
-  margin-bottom: 0px;
-}
-
-.box .col-lg-4, .box .col-md-6, .box .col-sm-12, .box .col-xs-12 {
-  padding: 20px;
 }

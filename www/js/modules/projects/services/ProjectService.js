@@ -39,7 +39,7 @@ angular.module('fellowship.modules.projects.services')
               deferred.reject("error-user-not-logged-in");
             parameters.user = id;
             ApiService.performCall("projects", "create", parameters)
-              .then(
+              .then( // RETORNA A ID DO NOVO PROJETO ;)
                 (result) => {
                   deferred.resolve(result);
                 },
@@ -137,7 +137,7 @@ angular.module('fellowship.modules.projects.services')
     service.createSlot = function(projectId){
       var deferred = $q.defer();
       var parameters = {
-        projectid = projectId
+        projectid : projectId
       };
       UserService.verifyLogin()
         .then(
@@ -148,7 +148,7 @@ angular.module('fellowship.modules.projects.services')
             ApiService.performCall("projects", "newslot", parameters)
               .then(
                 (result) => {
-                  deferred.resolve(result);
+                  deferred.resolve(result); // return the slot id
                 },
                 (data, status) => {
                   deferred.reject("error-cant-add-slot--"+status)
@@ -164,7 +164,7 @@ angular.module('fellowship.modules.projects.services')
     service.addMission = function(projectId){
       var deferred = $q.defer();
       var parameters = {
-        projectid = projectId
+        projectid : projectId
       };
       UserService.verifyLogin()
         .then(
@@ -191,7 +191,7 @@ angular.module('fellowship.modules.projects.services')
     service.removeMission = function(projectId){
       var deferred = $q.defer();
       var parameters = {
-        projectid = projectId
+        projectid : projectId
       };
       UserService.verifyLogin()
         .then(
@@ -218,7 +218,7 @@ angular.module('fellowship.modules.projects.services')
     service.listMissions = function(projectId){
       var deferred = $q.defer();
       var parameters = {
-        projectid = projectId
+        projectid : projectId
       };
       ApiService.performCall("projects", "listmission", parameters)
         .then(
