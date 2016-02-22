@@ -76,7 +76,7 @@
 
         <div class="collapse navbar-collapse" id="collapse-1">
           <ul class="nav navbar-nav">
-            <li ng-repeat="menuItem in menuItems">
+            <li class="{{menuItem.URL == curPage ? 'active' : ''}}" ng-repeat="menuItem in menuItems">
               <a ng-href="{{menuItem.URL}}"><i class="fa fa-users"></i> {{menuItem.name}}</a>
             </li>
             <!-- <li class="active"><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
@@ -84,7 +84,7 @@
             <li><a href="profile.html"><i class="fa fa-user"></i> Profile</a></li> -->
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a>Welcome {{user.name}}</a></li>
+            <li><a>Welcome, {{username}}</a></li>
             <li><a ng-click="logout()" href="#"><i class="fa fa-sign-out"></i>Log Out</a></li>
           </ul>
         </div>
