@@ -1,4 +1,5 @@
 var restify    = require('restify');
+var Mongo = require('./lib/utils/mongo.js');
 
 var modules = {};
 
@@ -14,7 +15,26 @@ var server = restify.createServer();
 server.use(restify.acceptParser(server.acceptable));
 server.use(restify.queryParser());
 server.use(restify.bodyParser());
+
+server.on('InternalServer', function (req, res, err, cb) {
+  console.log('restify error', err);
+  err.body = 'something is wrong!';
+  return cb();
+});
+
+// FilterParams
+server.use(function (req, res, next){
+  console.log('restify request');
+  console.dir(req.params);
+
+  req.params._id = Mongo.ObjectId(req.params.id);
+
+  return next();
+});
+
 for(module in modules){
-  server.get("/api/"+module+"/:path", modules[module].listener)
+  server.post("/api/"+module+"/:path", modules[module].listener);
 }
+
+
 server.listen(4000);

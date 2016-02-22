@@ -1,11 +1,8 @@
 var mongo = require('../utils/mongo.js');
 
 var service = function(){
-  this.response = {
-    "result" : "404"
-  };
-  this.listener = (req, res) => {
-    res.end(JSON.stringify(this.response));
+  this.listener = (req, res, next) => {
+    console.dir(req)
   };
   this.mongo = mongo;
   this.restMethods = {
@@ -19,8 +16,9 @@ var service = function(){
       return next();
     },
     getById: function getById(collection, req, res, next) {
+      console.dir(req.params)
         collection.findOne({
-            _id: db.ObjectId(req.params.id)
+            _id: req.params._id
         }, function (err, data) {
             res.writeHead(200, {
                 'Content-Type': 'application/json; charset=utf-8'
@@ -31,20 +29,23 @@ var service = function(){
     },
     create: function create(collection, req, res, next) {
         var skill = req.params;
-        console.log (JSON.stringify(skill));
+        console.log("Creating entity")
         collection.save(skill,
             function (err, data) {
                 res.writeHead(200, {
                     'Content-Type': 'application/json; charset=utf-8'
                 });
                 res.end(JSON.stringify(data));
+                console.dir(skill);
             });
         return next();
     },
     updateById: function updateById(collection, req, res, next) {
         // get the existing skill
+        console.log("updateById")
+        console.dir(req.params)
         collection.findOne({
-            _id: db.ObjectId(req.params.id)
+            _id: req.params._id
         }, function (err, data) {
             // merge req.params/skill with the server/skill
             if (err){
@@ -61,7 +62,7 @@ var service = function(){
                 updProd[n] = req.params[n];
             }
             collection.update({
-                _id: db.ObjectId(req.params.id)
+                _id: req.params._id
             }, updProd, {
                 multi: false
             }, function (err, data) {
@@ -69,13 +70,15 @@ var service = function(){
                     'Content-Type': 'application/json; charset=utf-8'
                 });
                 res.end(JSON.stringify(data));
+                console.log("Resource Updated");
+                console.dir(req.params);
             });
         });
         return next();
     },
     deleteById: function deleteById(collection, req, res, next) {
         collection.remove({
-            _id: db.ObjectId(req.params.id)
+            _id: req.params._id
         }, function (err, data) {
             res.writeHead(200, {
                 'Content-Type': 'application/json; charset=utf-8'
@@ -85,7 +88,6 @@ var service = function(){
         return next();
     }
   }
-
 }
 
 module.exports = service;
