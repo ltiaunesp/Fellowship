@@ -101,6 +101,8 @@
 
   /*Menu buttons style*/
   div.navbar-header a.navbar-brand,
+  div.navbar-header span.navbar-brand,
+  div.navbar-header span.navbar-brand:hover,
   div.navbar-header a.navbar-brand:hover,
   div.navbar-header a.navbar-brand:active,
   div.navbar-header a.navbar-brand:disabled {
@@ -179,6 +181,14 @@
 
   /*Menu buttons style*/
   div.navbar-header a.navbar-brand,
+  div.navbar-header span.navbar-brand,
+  div.navbar-header span.navbar-brand:hover,
+  div.navbar-header a.navbar-brand:hover,
+  div.navbar-header a.navbar-brand:active,
+  div.navbar-header a.navbar-brand:disabled {
+    background-color: #26A599;
+    color: #F2F4F5;
+  }
   div.navbar-header a.navbar-brand:hover,
   div.navbar-header a.navbar-brand:active,
   div.navbar-header a.navbar-brand:disabled {
