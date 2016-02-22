@@ -39,9 +39,21 @@ img {
   margin-bottom: 20px;
 }
 
-.thumbnail {
-  height: 150px;
+.thumb-proj {
+  min-height: 190px;
+  margin-bottom: 0px;
   min-width: 300px;
+  margin-bottom: 0px;
+}
+
+.thumb-skill {
+  min-height: 110px;
+  margin-bottom: 0px;
+  min-width: 300px;
+  margin-bottom: 0px;
+}
+
+.progress {
   margin-bottom: 0px;
 }
 
@@ -57,12 +69,6 @@ img {
   #center {
     text-align: center;
   }
-}
-
-.thumbnail {
-  min-height: 190px;
-  min-width: 300px;
-  margin-bottom: 0px;
 }
 
 .box .col-lg-4, .box .col-md-6, .box .col-sm-12, .box .col-xs-12 {

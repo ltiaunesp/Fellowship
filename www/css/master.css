@@ -8,6 +8,7 @@
     gray: #B4BBC3;
     lightGray: #F2F4F5;
 */
+
 @font-face {
     font-family: "Exo-Regular";
     src: url(../fonts/Exo-Regular.otf);
@@ -17,6 +18,15 @@
     src: url(../fonts/Caviar_Dreams_Bold.ttf);
 }
 
+@font-face {
+    font-family: "Arial-Unicode";
+    src: url(../fonts/ARIALUNI.TTF);
+}
+
+#orange {
+  color: #FF6B3C;
+}
+
 @media all and (min-width: 768px) {
 
   a, a:hover, a:active, a:visited {
@@ -24,19 +34,45 @@
   }
 
   body, p, li, ul, span {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "Arial-Unicode", Helvetica, Arial, sans-serif;
+    color: #444C58;
   }
 
   span.new-h1, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: "Caviar_Dreams_Bold", Helvetica, Arial, sans-serif;
+    color: #444C58;
   }
 
   /*Button style*/
+  a#button-strong {
+    background-color: #26A599;
+    color: #F2F4F5;
+  }
+
+  a#button-strong,
+  a#button-strong:active,
+  a#button-strong:visited {
+    background-color: #26A599;
+    color: #F2F4F5;
+    text-decoration: none;
+  }
+
+  a#button-strong:hover,
+  a#button-strong a:hover,
+  a#button-strong span a:hover {
+    background-color: #218A80;
+    color: #F2F4F5;
+    text-decoration: none;
+  }
+  /**/
   button#button-strong {
     background-color: #26A599;
     color: #F2F4F5;
   }
 
+  button#button-strong a,
+  button#button-strong a:active,
+  button#button-strong a:visited,
   button#button-strong span a,
   button#button-strong span a:active,
   button#button-strong span a:visited {
@@ -44,8 +80,10 @@
     color: #F2F4F5;
     text-decoration: none;
   }
+
   button#button-strong:hover,
-  button#button-strong span a:hover{
+  button#button-strong a:hover,
+  button#button-strong span a:hover {
     background-color: #218A80;
     color: #F2F4F5;
     text-decoration: none;
@@ -85,6 +123,55 @@
 
 @media (max-width: 768px) {
 
+  /*Button*/
+
+    /*Button style*/
+    a#button-strong {
+      background-color: #26A599;
+      color: #F2F4F5;
+    }
+
+    a#button-strong,
+    a#button-strong:active,
+    a#button-strong:visited {
+      background-color: #26A599;
+      color: #F2F4F5;
+      text-decoration: none;
+    }
+
+    a#button-strong:hover,
+    a#button-strong a:hover,
+    a#button-strong span a:hover {
+      background-color: #218A80;
+      color: #F2F4F5;
+      text-decoration: none;
+    }
+    /**/
+    button#button-strong {
+      background-color: #26A599;
+      color: #F2F4F5;
+    }
+
+    button#button-strong a,
+    button#button-strong a:active,
+    button#button-strong a:visited,
+    button#button-strong span a,
+    button#button-strong span a:active,
+    button#button-strong span a:visited {
+      background-color: transparent;
+      color: #F2F4F5;
+      text-decoration: none;
+    }
+
+    button#button-strong:hover,
+    button#button-strong a:hover,
+    button#button-strong span a:hover {
+      background-color: #218A80;
+      color: #F2F4F5;
+      text-decoration: none;
+    }
+
+  /*Menu*/
   nav.navbar, nav.bar div.container-fluid {
     background-color: #444C58;
     color: #F2F4F5;
